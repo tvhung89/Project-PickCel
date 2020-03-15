@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preview</title>
+    <style type="text/css">
+      .slider {
+          width: 500px;
+          height: 300px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: row;
+      }
+      
+      .slider .slide {
+          flex-basis: 800px;
+          display: none;
+      }
+      
+      .slider .slide.active {
+          display: block;
+      }
+      
+      .slider .slide img {
+          width: 100%;
+      }
+    </style>
+  <link rel="shortcut icon" href="favicon.ico"></head>
+  <body>
+    <div class="preview">
+      <div class="slide" id="slider">
+        <div class="slide active" data-duration="1000"><img src="./images/home-slider/slider1.svg"></div>
+        <div class="slide active" data-duration="5000"><img src="./images/home-slider/slider2.svg"></div>
+        <div class="slide active" data-duration="3000"><img src="./images/home-slider/slider3.svg"></div>
+      </div>
+      <div class="slide" id="slider2">
+        <div class="slide active" data-duration="5000"><img src="./images/home-slider/slider1.svg"></div>
+        <div class="slide active" data-duration="3000"><img src="./images/home-slider/slider2.svg"></div>
+        <div class="slide active" data-duration="1000"><img src="./images/home-slider/slider3.svg"></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script>
+      function showSlide(slider) {
+          var slides = slider.querySelectorAll('.slide');
+          var duration = 0;
+          var prevSlide = slides[0];
+          var activeSlide = slides[0];
+          for (var i = 0; i < slides.length; i++) {
+              var activedSlide = slides[i];
+              if (activedSlide.classList.contains('active') > 0) {
+                  prevSlide = activedSlide;
+                  if (i + 1 < slides.length) activeSlide = slides[i + 1];
+                  duration = parseInt(activedSlide.getAttribute('data-duration'), 10);
+              }
+          }
+      
+          prevSlide.classList.remove('active');
+          activeSlide.classList.add('active');
+      
+          setTimeout(function() {
+          showSlide(slider);
+          }, duration);
+      }
+      
+      var slider = document.getElementById('slider');
+      var slider2 = document.getElementById('slider2');
+      showSlide(slider);
+      showSlide(slider2);
+    </script>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>

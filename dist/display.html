@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloud Based Digital Signage Provider</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico"></head>
+  <body>
+<div class="modal fade ads__change-password ads__display-add show" id="change-password">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Change Password</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body left">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="oldPassword">Old password:</label>
+            <input class="form-control" id="oldPassword" type="text" placeholder="Please enter old password *">
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Old password:</label>
+            <input class="form-control" id="newPassword" type="text" placeholder="Please enter new password (minimum 6 characters) *">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm new password:</label>
+            <input class="form-control" id="confirmPassword" type="text" placeholder="Please repeat the new password *">
+          </div>
+          <button class="btn btn-success rounded" type="button" data-dismiss="modal">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ads__head">
+  <div class="ads__logo"><img src="./images/logo.png" alt="Logo"></div>
+  <div class="ads__user">
+    <div class="dropdown"><a class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">misovaiw@omegafive.net</a>
+      <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#change-password"><i class="icon-unlock"></i><span>Change password</span></a><a class="dropdown-item" href="#"><i class="icon-logout"></i><span>Logout</span></a></div>
+    </div>
+  </div>
+</div>
+    <div class="ads__body">
+      <div class="ads__left-bar">
+        <ul>
+          <li><a href="display_list.html"><i class="icon-monitor"></i><span>Display</span></a></li>
+          <li><a href="assets.html"><i class="icon-image"></i><span>Assets</span></a></li>
+          <li><a href="composition.html"><i class="icon-layout"></i><span>Composition</span></a></li>
+          <li><a href="template.html"><i class="icon-layout"></i><span>Template</span></a></li>
+          <li><a href="scheduler.html"><i class="icon-calendar"></i><span>Schedule</span></a></li>
+          <li><a href="app.html"><i class="icon-grid"></i><span>App</span></a></li>
+        </ul>
+      </div>
+<div class="modal fade ads__welcome-modal show" id="welcome-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1><span>Hi,</span><span>Hung Viet Tran</span></h1>
+        <h4>You are just one more step away!</h4>
+        <div class="ads__welcome-modal__form">
+          <div class="ads__welcome-modal__left"><img src="./images/rocket.svg"></div>
+          <div class="ads__welcome-modal__right">
+            <form action="#" method="post">
+              <div class="form-group">
+                <input class="form-control is-invalid" type="text" name="companyName" placeholder="Company Name *">
+                <div class="invalid-feedback">* required</div>
+              </div>
+              <div class="form-group">
+                <select class="form-control is-invalid" name="countryCode">
+                  <option>Select country *</option>
+                </select>
+                <div class="invalid-feedback">* required</div>
+              </div>
+              <div class="form-group">
+                <input class="form-control is-invalid" type="text" name="phoneNumber" placeholder="Phone">
+                <div class="invalid-feedback">* required</div>
+              </div>
+              <div class="form-group d-flex">
+                <button class="btn btn-primary rounded" type="button">Proceed</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade ads__guide-modal show" id="guide-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1>Getting Started with Pickcel</h1>
+        <div class="ads__guide-modal__content"><img src="./images/group.svg" alt="Group Icons">
+          <div class="ads__guide-modal__steps">
+            <div class="step">
+              <p>Step 1</p>
+              <p>Pair your display</p>
+            </div>
+            <div class="step">
+              <p>Step 2</p>
+              <p>Add assets</p>
+            </div>
+            <div class="step">
+              <p>Step 3</p>
+              <p>Create Composition</p>
+            </div>
+            <div class="step">
+              <p>Step 4</p>
+              <p>Create schedules</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary rounded" type="button" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade ads__display-add show" id="display-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Add Display</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body"><img src="./images/add-display.png" alt="Add Display">
+        <p>Enter registration code as shown on the display</p>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Code</div>
+          </div>
+          <input class="form-control" type="text" maxlength="6" required placeholder="Enter registration code">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary rounded" type="button" data-dismiss="modal">Cancel</button>
+        <button class="btn btn-success rounded" type="button" data-dismiss="modal">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <!--button.btn.btn-primary(type="button" data-toggle="modal" data-target="#welcome-modal") Show welcome modal-->
+      <!--button.btn.btn-primary(type="button" data-toggle="modal" data-target="#guide-modal") Show guide modal-->
+      <!--button.btn.btn-primary(type="button" data-toggle="modal" data-target="#display-modal") Show display modal-->
+      <div class="ads__right-content">
+        <div class="ads__display"><img src="./images/screen.svg" alt="Screen">
+          <p>Connect your display to Signage device and install Signage player to add display</p>
+          <ul>
+            <li><a href="#">By Device</a></li>
+            <li><a href="#">Install Player</a></li>
+          </ul>
+          <button class="btn btn-primary rounded" type="button" data-target="#display-modal" data-toggle="modal"><i class="icon-plus"></i><span>Add display</span></button>
+          <div class="players">
+            <p>Pickcel signage players</p>
+            <ul>
+              <li><a href="#"><img src="./images/android.png"><span>Android</span></a></li>
+              <li><a href="#"><img src="./images/chrome.png"><span>Chrome</span></a></li>
+              <li><a href="#"><img src="./images/windows.png"><span>Windows</span></a></li>
+              <li><a href="#"><img src="./images/amazon.png"><span>Firestick</span></a></li>
+              <li><a href="#"><img src="./images/macos.png"><span>MacOS</span></a></li>
+              <li><a href="#"><img src="./images/linux.png"><span>Linux</span></a></li>
+              <li><a href="#"><img src="./images/lg.png"><span>WebOS</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.6.1/dist/interact.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
+    <script src="./js/calendar.js"></script>
+    <script src="./js/datepicker.js"></script>
+    <script src="./js/sortable.js"></script>
+    <script src="./js/zone.js"></script>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>

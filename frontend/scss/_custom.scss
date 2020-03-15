@@ -1,0 +1,454 @@
+body {
+  font-family: 'Muli', sans-serif;
+  color: $text-color;
+  font-size: $global-text-size;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  font-size: $global-text-size;
+
+  &.btn-outline-primary {
+    border-color: $primary-color;
+    color: $primary-color;
+    box-shadow: none;
+    outline: none;
+
+    &:focus,
+    &:hover,
+    &:active,
+    &:visited {
+      background-color: $primary-color!important;
+      box-shadow: 0 0 0 0.2rem $primary-alpha-color !important;
+      color: $white;
+      border-color: $primary-color !important;
+    }
+  }
+
+  &.btn-primary,
+  &.btn-success,
+  &.btn-info {
+    &.rounded {
+      border-radius: 50px !important;
+      padding: 7px 30px;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &.btn-primary {
+    background-color: $primary-color;
+    color: $white;
+    outline: none;
+    box-shadow: none;
+    border: none;
+
+    &:focus,
+    &:active,
+    &:visited {
+      box-shadow: 0 0 0 0.2rem $primary-alpha-color !important;
+      background-color: $primary-color !important;
+    }
+  }
+
+  &.loading {
+    position: relative !important;
+    text-indent: -9999px;
+    pointer-events: none;
+
+    &:after {
+      content: '';
+      border: 3px solid $white;
+      width: 20px;
+      height: 20px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      border-left-color: transparent;  
+      animation: loading 1s linear infinite;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {transform: translate(-50%, -50%) rotateZ(0deg);}
+  100% {transform: translate(-50%, -50%) rotateZ(360deg);}
+}
+
+.form-control {
+  font-size: $global-text-size;
+  box-shadow: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  @extend %muli-normal;
+}
+
+h1 {
+  font-size: $big-header-text-size;
+}
+
+h2 {
+  font-size: $header-text-size;
+}
+
+h3 {
+  font-size: $normal-text-size;
+}
+
+h4,
+h5,
+h6 {
+  font-size: $global-text-size;
+}
+
+.radio, .checkbox {
+  position: relative;
+
+  label {
+    padding-left: 20px;
+    position: relative;
+    margin: 0;
+    user-select: none;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      border-radius: 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &:before {
+      width: 15px;
+      height: 15px;
+      border-radius: 10px;
+      background-color: $primary-color;
+      left: 0;
+    }
+
+    &:after {
+      width: 5px;
+      height: 5px;
+      background-color: $white;
+      z-index: 1;
+      left: 5px;
+      display: none;
+    }
+  }
+
+  input {
+    @include opacity(0);
+    visibility: hidden;
+    position: absolute;
+
+    &:checked + label {
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.checkbox {
+  label {
+    margin-bottom: 4px;
+    position: relative;
+    &:before {
+      border-radius: 0;
+      background-color: $white;
+      border: 2px solid $primary-color;
+    }
+
+    &:after {
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      content: '\e944';
+      font-family: 'icomoon';
+      color: $white;
+      font-size: $biger-header-text-size;
+      left: -4px;
+      top: 8px;
+      font-weight: 400;
+    }
+  }
+
+  input {
+    &:checked + label {
+      &:before {
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  &.no-text {
+    label {
+      &:after {
+        left: -4px;
+        top: 0;
+      }
+    }
+  }
+}
+
+.form-group, .input-group {
+  position: relative;
+  .form-control {
+    &.error {
+      border-color: $primary-color;
+    }
+  }
+
+  label.error {
+    position: absolute;
+    color: $primary-color;
+    bottom: -25px;
+    left: 0;
+  }
+}
+
+#upload-modal {
+  .ajax-upload-dragdrop {
+    width: 80% !important;
+    background: transparent url('/dist/images/file-upload.png') no-repeat center center;
+    background-size: 70%;
+    height: 150px;
+    border: dashed 2px #979797;
+    margin: 30px auto;
+
+    .ajax-file-upload {
+      width: 100% !important;
+      height: 100% !important;
+      text-indent: -9999px;
+
+      input[type="file"] {
+        @include opacity(0);
+      }
+    }
+
+    > span {
+      display: none;
+    }
+  }
+
+  .ajax-file-upload-container {
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: visible;
+    display: flex;
+    flex-direction: column;
+
+    .ajax-file-upload-statusbar {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $light-gray-color;
+      position: relative;
+
+      &:last-child {
+        border: none;
+        margin-bottom: 0;
+      }
+
+      .ajax-file-upload-filename {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px;
+      }
+
+      .ajax-file-upload-cancel, .icon-pencil {
+        font-size: $header-text-size;
+        color: $primary-color;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+
+        &.icon-pencil {
+          right: 60px;
+        }
+      }
+
+      .ajax-file-upload-abort {
+        display: none !important;
+      }
+
+      .ajax-file-upload-progress {
+        display: block !important;
+        height: 5px;
+
+        .ajax-file-upload-bar {
+          text-indent: -9999px;
+        }
+      }
+
+      .name-box-wrapper {
+        position: absolute;
+        top: 8px;
+        width: calc(100% - 100px);
+
+        .name-box {
+          position: relative;
+
+          .form-control {
+            border: 1px dashed $light-gray-color;
+            padding: 10px 80px 10px 15px;
+          }
+
+          i {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            font-size: $header-text-size;
+            color: $primary-color;
+            cursor: pointer;
+
+            &.icon-check {
+              right: 10px;
+              color: $success-color;
+            }
+
+            &.icon-close {
+              right: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type="time"]::-webkit-clear-button,
+input::-ms-clear {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::-webkit-search-cancel-button,
+::-webkit-search-results-button,
+input[type=search] { 
+  -webkit-appearance: none; 
+}
+
+.Toastify__toast-container {
+  &:before {
+    content: '';
+    position: fixed;
+    width: 9999px;
+    height: 9999px;
+    z-index: 1100;
+    top: -400px;
+    left: -2000px;
+  }
+
+  .Toastify__toast {
+    z-index: 1101;
+    display: none;
+
+    &:last-child {
+      display: flex;
+    }
+    .Toastify__toast-body {
+      @extend %muli-bold;
+      font-size: $header-text-size;
+    }
+  }
+}
+
+.loading-text {
+  position: relative;
+  &:after {
+      content: 'Loading...';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: $header-text-size;
+      z-index: 100;
+  }
+}
+
+.ads__swal {
+  .swal-title {
+    font-size: $header-text-size;
+  }
+}
+
+@for $z from 0 to 100 {
+  .order#{$z} {
+      order: $z
+  }
+}
+
+.playing {
+  position: relative;
+  padding: 0;
+
+  &:before {
+    position: absolute;
+    content: 'Loading...';
+    color: $white;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  > iframe {
+    position: relative;
+    z-index: 1;
+  }
+}

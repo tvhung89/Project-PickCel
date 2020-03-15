@@ -1,0 +1,42 @@
+.modal.fade.ads__upload.ads__display-add.show#upload-modal
+    .modal-dialog.modal-md
+        .modal-content
+            .modal-header
+                h3.modal-title Upload asset(s)
+                a(href="#" data-dismiss="modal")
+                    i.icon-close
+            .modal-body.left
+                form.d-none(action="#" method="post")
+                    .form-group
+                        input.form-control#fileUpload(type="file" name="fileUpload" multiple)
+                        img(src="./images/file-upload.png" alt="File upload")
+                .file-lists
+                    .file   
+                        .info
+                            .left
+                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAA8CAYAAAD2ZeOZAAAABHNCSVQICAgIfAhkiAAAA9VJREFUaIHtml1oW1UcwH//0zTN7NKWStVMWUsttcqcUWrxpSKIWGVM8GEwFIdgEaSv4vYg+CDik08dPrTg15ugD4XJOpT6MqidsFo/2Eop61ZSW7e4Ns3aXNN7fDhpa8y916TQnAj393LC+Z+b/P7nKyeHCAUeHc+/oLT7vkAn0EIVcTeyW7mbC4NXB5OfVPKc4ktdlxzPfaC0e07gCaosDoBQF3H1yEMj069X8ph6rCn/NFrOCMh+uZXFHhJQaPed/XSqiAoTUIgk99upIipIQAncWw2niigzAVUtn4rZTuDjy6/4NaldeTAJKD71S6Am5CUSDQgS8UugRuTrQUUCGngnUBPyAKqxObiBRwK1I9/chjQ0Bjf6VwKSPO/oasiVi5u9jXY20c5mQCud/0vVHwmYaHZQjS3wHwMARMR1O2tm2uyFUN4WobwtQnlbhPK2COVt4Xm2Od8vtEZhKg1Dl7VnbPx3TXZLePl+mFmFN34sPd9NPWtuU/q+25+zn2fP/7xqykeaiutP9xhxx4VzS3B34QdQk6Xjnaf8V4umpw5G4FT7bv2RJlN/LauZTMPbM5qzc5oTk3ZO1Z59NpmG2YymOy70twmfLRi5jkYpxAXQDD8u9LXCk61mep1qh5OHzegseRzHh7qEYwlojcJ6Hi7e1Lz7a2nMcU0HDc8ZFz98F+wva0a0s3C2Pt0jRJX50OG50p5+qhUGO434bEaT2yqOHz8kvNZuRnMqDZk8PH+fMNQlRbGZVbjlQHdcOPNw8A2kr/yHVzTr+d2psz1lflvzbv/MPSa5tAOvTlEylY4fMuUtx5R/5LaT1juxKxmz8F+6aJ5NxEzSfgQutfksHG2G/jahozACF5a92z5wwJQ51zve1sCOUCK2Wx9VQrzevN78x2gtbZp2h+/y9wuUH0sZ+Z44RBVcy8JYyntxLm5AX8B73bhjZLy21dFeIRGDWN1u3XaC1+/sWV7z1oNmHgNczfjvKt+vaI4ljMRor5RsnxeWIdliOmO0V4gpTUejMLGiizpptFd2Rimos6CMb9hLafOw47KzM3gxmYaJFY3jGpG1fPGOM5bSjMxr0o6Jd8eF1AZc+lMYS2k+XzCbwdFm8/0xm9F8NBu8Bdfc1Ue5bLnui//rs00ob4tQ3hahvC1CeVuE8rYI5W0RytsilLdFKG8LpeEH2xJ7QYR5JfCFbZFK0bCczjRcV9MD0bPAt7aFykVrXJCTiydkQwFMD0SfQ3gT9JxtOT80bGr011u6vvungfoJ8PgjaNc3uuFg7vaB6uv5s97Q4s5Nsc57UnQT+jeB9Ve1RUHKGgAAAABJRU5ErkJggg==" alt="Video Thumbnail")
+                            .center
+                                input(type="text" value="feature1")
+                                p 95 KB
+                            .right
+                                p
+                                    a(href="#")
+                                        i.icon-trash
+                        .progress
+                            .progress-bar.progress-bar-striped(style="width: 25%") 25%
+                    .file
+                        .info
+                            .left
+                                img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAA8CAYAAAD2ZeOZAAAABHNCSVQICAgIfAhkiAAAA3hJREFUaIHtmk9oHFUYwH/fe5Nk1267aYnZQgv9Jw2RQEPFQw3EUlGxIHgSilCsEESPOVR686AWivQg6MEeDNGzJxUt0saL8Q/EWgpirdEKgXQPa5Zs2ezuzHs9vGbtambdCe7MVuZ3G773vfl9b96bP48R7mLneMbCG8B+YJAYqVRVsHirf2r8xbUPouQpa9HBHG9Z+BQ4TMziAAjawoUrM5lTUdIUXzEpcAaQLql1SuQClLW81k2jiEQqQAHjXRaKSscFKIRCHEYR6agAFZfNJtAWLvwwk3khrEEvywNohJmwAnpCvt+z4UGLF1ZAz8h7KnoBPSEPsD0XtG+wQQE9I18Y9MllTPtGfytAzBxtrlf8lCqatbpQrYePqwXfU/UxL0avjtjxb9PH4RnY3zPTZjOk8kmRyidFKp8UqXxSpPJJESrvTzTwJxqYvWfj9InE/3Pk7wc6fiX2JxrQKIL/J2RHoHYTtfw+Zvdp0Hmo3UTfeBVZuYjZfRozfNK1A6j+jF6cdrGH3sMMPe9y7kEtvQ3VXzC7pl2erSGVBfTVyVCnaCPfN9yUYWAPZs+bUF92Ra0fA3bwCcjsRVbnXdvsSDNmClOgMkj5ksu725+sXMbsOwfZEWR1Hrn9E3brEYKxL/4jecBbGEMvTrccq+Ksk+7bDoC+9jTe1zn01UnU0vlmzA4+Bbb2T4nKAnboOXc1gjKYKgQlsDVs7pFwl6jyALJysW3cFF7C7nwFu2UUZKAlTxVnMYUpbP6Ymxqr86jrJ/8aYZ13sWZl4efpymeg2XcOdB6pXIGg1CJjtk1Co4j33a6WHKksuHYbxMLozjfs+mIMStjMgdZY/07QeYJD37upEdxGSp+gfj/jFnnfMP7ha4hfwj7wMFL9Df3joxuepiu3SilfAsBum0DWfnWLdp36sovlxrH5Y9gdz2IOvAOAvn6qucDt1iNgakj5y/DzxLn1YQ7OYh484e4u9SUAN1WCMt43Q9H6guOxbn1I8SMkO4rdMoq95xmwfreK3F+vbTp1ioHj9/XrQSqfFKl8UqTySZHKJ0UqnxSpfFKk8kmRyieFwvJt0hKbwTcsKlF8mLRIZCy3BjL8oeRx3gXC9xd6DyPCCXmMqgJQR3lShJeBGwmLtWMN+Fj6OChHuQwb/AhqP2OALNnY1dqRxfA5FXmdlh9y7gAbszjWrPkBiAAAAABJRU5ErkJggg==" alt="Image Thumbnail")
+                            .center
+                                input(type="text" value="feature1")
+                                p 95 KB
+                            .right
+                                p
+                                    a(href="#")
+                                        i.icon-trash
+                        .progress
+                            .progress-bar.progress-bar-striped(style="width: 47%") 47%
+            .modal-footer
+                button.btn.btn-success.rounded(type="button") Add files
+                button.btn.btn-primary.rounded(type="button") Upload

@@ -1,0 +1,85 @@
+.modal.fade.ads__display-add.ads__add-schedule.show#add-schedule-modal
+	.modal-dialog.modal-lg
+		.modal-content
+			.modal-header
+				h3.modal-title Select Composition
+				a(href="#" data-dismiss="modal")
+					i.icon-close
+			.modal-body.left
+				.ads__add-schedule-grid
+					.ads__add-schedule-left
+						.ads__add-schedule-top
+							.ads__search-box
+								input(type="text" placeholder="Search...")
+								i.icon-search
+						.ads__add-schedule-list
+							each val in ['youtube', 'weather', 'clock']
+								.ads__add-schedule-item
+									input(type="radio" name="compositon" id=val)
+									label(for=val)
+										.thumb
+											img(src="./images/" + val + ".svg")
+										.content
+											h3= val + " name"
+											p horizontal
+										.info
+											p 21 Aug, 2019 06:03 PM
+											p 1920*1080
+										.checkbox
+											.selected
+												i.icon-check
+						.foot
+							p 3 compositions
+							ul.pagination
+								li.page-item
+									a.page-link(href="#")
+										i.icon-angle-double-left
+								li.page-item
+									a.page-link(href="#")
+										i.icon-angle-left
+								li.page-item.active
+									a.page-link(href="#") 1
+								li.page-item
+									a.page-link(href="#") 2
+								li.page-item
+									a.page-link(href="#") 3
+								li.page-item.disabled
+									a.page-link(href="#")
+										i.icon-angle-double-right
+								li.page-item.disabled
+									a.page-link(href="#")
+										i.icon-angle-right
+					.ads__add-schedule-right
+						h2 Schedule Time
+						.ads__add-schedule-time
+							.form-group.row
+								.time-input.col-6
+									label(for="start") Start
+									input.form-control#start(type="time" value="10:30")
+								.time-input.col-6
+									label(for="end") End
+									input.form-control#end(type="time" value="15:45")
+							.ads__add-schedule-repeater
+								.checkbox
+									input#repeat.form-control(type="checkbox")
+									label(for="repeat") Repeat?
+								.ads__add-schedule-frame
+									.form-group.row
+										.date-input.col-6
+											input.form-control.date-picker(type="text" name="startDate" readonly)
+											i.icon-calendar
+										.date-input.col-6
+											input.form-control.date-picker(type="text" name="endDate" readonly)
+											i.icon-calendar
+									.checkbox
+										input#alldays.form-control(type="checkbox")
+										label(for="alldays") Repeat for all days?
+									.days
+										each val in ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
+											input(type="checkbox" name="repeat[]" id=val value=val)
+											label(for=val)= val
+			.modal-footer
+				.ads__add-schedule-btns
+					button.btn.btn-primary.rounded(type="button" data-dismiss="modal") Cancel
+					button.btn.btn-success.rounded(type="button" data-dismiss="modal") Apply
+

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 280 160">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-streaming);
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 10px;
+        font-family: SourceSansPro-Regular, Source Sans Pro;
+      }
+
+      .cls-4 {
+        fill: #455372;
+      }
+
+      .cls-5 {
+        font-size: 14px;
+        font-family: Muli-Light, Muli;
+        font-weight: 300;
+      }
+    </style>
+    <clipPath id="clip-streaming">
+      <rect width="280" height="160"/>
+    </clipPath>
+  </defs>
+  <g id="streaming" class="cls-1">
+    <rect class="cls-2" width="280" height="160"/>
+    <g id="wifi" transform="translate(100.585 40.027)">
+      <g id="Group_436" data-name="Group 436" transform="translate(-0.001 4.679)">
+        <path id="Path_447" data-name="Path 447" class="cls-2" d="M19.691,25.071a5.38,5.38,0,1,1,5.379-5.381A5.387,5.387,0,0,1,19.691,25.071Zm0-8.29A2.913,2.913,0,1,0,22.6,19.692,2.915,2.915,0,0,0,19.691,16.781Z" transform="translate(21.001 9.454)"/>
+        <path id="Path_448" data-name="Path 448" class="cls-2" d="M15.394,36.832a1.239,1.239,0,0,1-.873-.36,17.527,17.527,0,0,1,0-24.788,1.233,1.233,0,1,1,1.744,1.744,15.061,15.061,0,0,0,0,21.3,1.232,1.232,0,0,1-.871,2.1Z" transform="translate(13.773 5.07)"/>
+        <path id="Path_449" data-name="Path 449" class="cls-2" d="M14.092,49.9a1.239,1.239,0,0,1-.873-.36,29.121,29.121,0,0,1,0-41.183A1.233,1.233,0,1,1,14.963,10.1a26.655,26.655,0,0,0,0,37.694,1.232,1.232,0,0,1-.871,2.1Z" transform="translate(6.882 0.194)"/>
+        <path id="Path_450" data-name="Path 450" class="cls-2" d="M12.776,62.973a1.239,1.239,0,0,1-.873-.36,40.759,40.759,0,0,1,0-57.573,1.233,1.233,0,1,1,1.744,1.744,38.29,38.29,0,0,0,0,54.084,1.232,1.232,0,0,1-.871,2.1Z" transform="translate(0.001 -4.679)"/>
+      </g>
+      <g id="Group_437" data-name="Group 437" transform="translate(50.981 4.679)">
+        <path id="Path_451" data-name="Path 451" class="cls-2" d="M21.9,36.832a1.232,1.232,0,0,1-.873-2.1,15.061,15.061,0,0,0,0-21.3,1.233,1.233,0,0,1,1.744-1.744,17.527,17.527,0,0,1,0,24.788A1.229,1.229,0,0,1,21.9,36.832Z" transform="translate(-20.663 5.07)"/>
+        <path id="Path_452" data-name="Path 452" class="cls-2" d="M25.218,49.9a1.232,1.232,0,0,1-.873-2.1,26.655,26.655,0,0,0,0-37.694,1.233,1.233,0,1,1,1.744-1.744,29.121,29.121,0,0,1,0,41.183A1.229,1.229,0,0,1,25.218,49.9Z" transform="translate(-15.79 0.194)"/>
+        <path id="Path_453" data-name="Path 453" class="cls-2" d="M28.54,62.973a1.232,1.232,0,0,1-.873-2.1,38.294,38.294,0,0,0,0-54.084A1.233,1.233,0,0,1,29.411,5.04a40.759,40.759,0,0,1,0,57.573A1.229,1.229,0,0,1,28.54,62.973Z" transform="translate(-10.916 -4.679)"/>
+      </g>
+    </g>
+    <g id="Group_457" data-name="Group 457">
+      <text id="STREAMING-2" data-name="STREAMING" class="cls-3" transform="translate(116 115)"><tspan x="0" y="0">STREAMING</tspan></text>
+    </g>
+    <g id="image" transform="translate(0 -80)">
+      <path id="Path_394" data-name="Path 394" class="cls-4" d="M0,0H280V160H0Z" transform="translate(0 80)"/>
+    </g>
+    <g id="Group_469" data-name="Group 469" transform="translate(-6 -6.695)">
+      <g id="Group_470" data-name="Group 470">
+        <g id="wifi-2" data-name="wifi" transform="translate(112.001 45.016)">
+          <g id="Group_436-2" data-name="Group 436" transform="translate(-0.001 4.679)">
+            <path id="Path_447-2" data-name="Path 447" class="cls-2" d="M18.77,23.229a4.459,4.459,0,1,1,4.458-4.46A4.465,4.465,0,0,1,18.77,23.229Zm0-6.871a2.414,2.414,0,1,0,2.413,2.413A2.416,2.416,0,0,0,18.77,16.358Z" transform="translate(14.957 5.386)"/>
+            <path id="Path_448-2" data-name="Path 448" class="cls-2" d="M14.365,32.466a1.027,1.027,0,0,1-.724-.3,14.527,14.527,0,0,1,0-20.545,1.022,1.022,0,1,1,1.446,1.446,12.483,12.483,0,0,0,0,17.654,1.021,1.021,0,0,1-.722,1.744Z" transform="translate(9.809 2.264)"/>
+            <path id="Path_449-2" data-name="Path 449" class="cls-2" d="M12.482,42.731a1.027,1.027,0,0,1-.724-.3,24.137,24.137,0,0,1,0-34.134A1.022,1.022,0,1,1,13.2,9.745a22.093,22.093,0,0,0,0,31.242,1.021,1.021,0,0,1-.722,1.744Z" transform="translate(4.901 -1.209)"/>
+            <path id="Path_450-2" data-name="Path 450" class="cls-2" d="M10.589,52.995a1.027,1.027,0,0,1-.724-.3,33.782,33.782,0,0,1,0-47.718,1.022,1.022,0,1,1,1.446,1.446,31.736,31.736,0,0,0,0,44.827,1.021,1.021,0,0,1-.722,1.744Z" transform="translate(0.001 -4.679)"/>
+          </g>
+          <g id="Group_437-2" data-name="Group 437" transform="translate(42.255 4.679)">
+            <path id="Path_451-2" data-name="Path 451" class="cls-2" d="M21.686,32.466a1.021,1.021,0,0,1-.724-1.744,12.483,12.483,0,0,0,0-17.654,1.022,1.022,0,1,1,1.446-1.446,14.527,14.527,0,0,1,0,20.545A1.019,1.019,0,0,1,21.686,32.466Z" transform="translate(-20.663 2.264)"/>
+            <path id="Path_452-2" data-name="Path 452" class="cls-2" d="M25.007,42.731a1.021,1.021,0,0,1-.724-1.744,22.093,22.093,0,0,0,0-31.242A1.022,1.022,0,0,1,25.729,8.3a24.137,24.137,0,0,1,0,34.134A1.019,1.019,0,0,1,25.007,42.731Z" transform="translate(-17.193 -1.209)"/>
+            <path id="Path_453-2" data-name="Path 453" class="cls-2" d="M28.329,52.995a1.021,1.021,0,0,1-.724-1.744,31.739,31.739,0,0,0,0-44.827,1.022,1.022,0,0,1,1.446-1.446,33.782,33.782,0,0,1,0,47.718A1.019,1.019,0,0,1,28.329,52.995Z" transform="translate(-13.721 -4.679)"/>
+          </g>
+        </g>
+        <g id="Group_462" data-name="Group 462">
+          <text id="STREAMING-3" data-name="STREAMING" class="cls-5" transform="translate(106 119)"><tspan x="0" y="0">STREAMING</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

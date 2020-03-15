@@ -1,0 +1,43 @@
+extends layouts/_dashboard-layout.pug
+block content
+    .ads__app
+        .ads__app-header
+            .ads__search-box.ads__app-search-box
+                input(type="text" placeholder="Search...")
+                i.icon-search
+        .ads__app-content
+            .ads__filter
+                p 
+                    span Filter by category
+                    a(href="#")
+                        i.icon-eraser
+                    a(href="#")
+                        i.icon-close
+                .ads__filter-group
+                    h4 Category
+                    - var categories = ['Social', 'Communication', 'Others', 'News', 'Business']
+                    each cat in categories
+                        .input-group
+                            label
+                                input(type="checkbox")
+                                span= cat
+                .ads__filter-group
+                    h4 Regional
+                    - var regions = ['Arabic', 'Spanish', 'Malayalam', 'Kannada']
+                    each re in regions
+                        .input-group
+                            label
+                                input(type="checkbox")
+                                span= re
+            .ads__app-list
+                .row
+                    - var apps = ['youtube', 'weather', 'facebook', 'streaming', 'cnn-arabic', 'bbc-mundo', 'deshabhimani', 'google-sheet', 'infobae', 'ticker', 'bbc', 'cnn-latina', 'instagram', 'url', 'noticeboard', 'twitter', 'toi', 'cnn', 'one-India', 'google-slide', 'ndtv', 'clock', 'huffpost', 'nytimes', 'news-au', 'wsj', 'google-traffic', 'tv', 'slack', 'dsmenu']
+                    - var app_names = ['Youtube', 'Weather', 'Facebook', 'Stream', 'CNN Arabic News', 'BBC Mundo News', 'Deshabhimani', 'Google Sheet', 'Infobae', 'Scroller', 'BBC', 'CNN Latin News', 'Instagram', 'URL', 'Notice Board', 'Twitter', 'TOI News Feed', 'CNN', 'OneIndia Kannada', 'Google Slide', 'NDTV', 'Digital Clock', 'Huffpost', 'NY Times', 'News.com', 'The Wall Street', 'Google Traffic', 'DTH TV', 'Slack', 'DS Menu']
+                    each val, index in apps
+                        .ads__app-list_item.col-6.col-sm-4.col-md-3.col-lg-2.col-xl-2
+                            .ads__app-list_item_thumb
+                                img(src='images/apps/' + val + '.svg')
+                            .ads__app-list_item_title
+                                p= app_names[index]
+                                button.btn.btn-default.btn-sm
+                                    i.icon-plus

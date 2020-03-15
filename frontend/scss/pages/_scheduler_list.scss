@@ -1,0 +1,60 @@
+$pre: 'ads__scheduler_list';
+
+.#{$pre} {
+    background-color: $gray-color;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+
+    .#{$pre}-calendar-wrapper {
+        width: 60%;
+        background-color: $white;    
+        padding: 15px;
+    }
+
+    .#{$pre}-detail {
+        flex-grow: 1;
+        margin-left: 15px;
+        background-color: $white;    
+        padding: 15px;
+
+        > form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .#{$pre}-items {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 15px;
+
+            &.no-schedule {
+                > img {
+                    max-width: 320px;
+                    margin: 50px auto 20px auto;
+                    display: block;
+                }
+
+                h3 {
+                    text-align: center;
+                }
+            }
+        }
+
+        .#{$pre}-btns {
+            button {
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

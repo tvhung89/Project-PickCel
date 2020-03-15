@@ -1,0 +1,70 @@
+- var fontUrl = "https://fonts.googleapis.com/css?family=Muli:300,400,700,900&display=swap"
+- var bootstrapCssUrl = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+- var jqueryUrl = "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+- var popperUrl = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+- var bootstrapJsUrl = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+- var datepickerUrl = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+- var fcCore = "https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"
+- var fcDayGrid = "https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"
+- var fcTimeGrid = "https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"
+- var fcInteraction = "https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"
+- var interactjs = "https://cdn.jsdelivr.net/npm/interactjs@1.6.1/dist/interact.min.js"
+- var moment = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Cloud Based Digital Signage Provider
+		link(href=fontUrl rel="stylesheet")
+		link(href=bootstrapCssUrl rel="stylesheet")
+		link(href="./css/app.css" rel="stylesheet")
+		block styles
+	body
+		include ../includes/_dashboard-header.pug
+		.ads__body
+			.ads__left-bar
+				ul
+					li
+						a(href="display_list.html")
+							i.icon-monitor
+							span Display
+					li
+						a(href="assets.html")
+							i.icon-image
+							span Assets
+					li
+						a(href="composition.html")
+							i.icon-layout
+							span Composition
+					li
+						a(href="template.html")
+							i.icon-layout
+							span Template
+					li
+						a(href="scheduler.html")
+							i.icon-calendar
+							span Schedule
+					li
+						a(href="app.html")
+							i.icon-grid
+							span App
+			block content
+
+		script(src=jqueryUrl)
+		script(src=popperUrl)
+		script(src=moment)
+		script(src=bootstrapJsUrl)
+		script(src=datepickerUrl)
+		script(src=interactjs)
+		script(src=fcCore)
+		script(src=fcDayGrid)
+		script(src=fcTimeGrid)
+		script(src=fcInteraction)
+		script(src="./js/calendar.js")
+		script(src="./js/datepicker.js")
+		script(src="./js/sortable.js")
+		script(src="./js/zone.js")
+		block scripts

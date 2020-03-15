@@ -1,0 +1,14 @@
+include _change_password-modal.pug
+.ads__head
+    .ads__logo
+        img(src="./images/logo.png" alt="Logo")
+    .ads__user
+        .dropdown
+            a.btn.btn-default.dropdown-toggle(type="button" data-toggle="dropdown") misovaiw@omegafive.net
+            .dropdown-menu
+                a.dropdown-item(href="#" data-toggle="modal" data-target="#change-password")
+                    i.icon-unlock
+                    span Change password
+                a.dropdown-item(href="#")
+                    i.icon-logout
+                    span Logout

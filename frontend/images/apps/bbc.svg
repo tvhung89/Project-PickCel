@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 280 160">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-bbc);
+      }
+
+      .cls-2 {
+        fill: url(#pattern);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 84 24">
+      <image width="84" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAYCAQAAADO+BJdAAACoUlEQVR4Ae2XTUhUURiGrz+RMxaVQRakSWKYUZQRlRRBIBFEZlZIUIsCjXaBFkmFrSKMkSg35iqKMIcS6W8h5kIxIQsXYZY1jUZ/EiX+1djME3wcBrzUuWeuJC087+o9fO93Hj64h3Mt3CxLNK3JGdB/C/qFanxUi3xco4MfhseFqONSNFnDI77HCPqO25xmN9soopIGXhH5O+hz4rAmKY8eo+OGSbMl02k0Bn1PKR5bfhbbuaMHjSORxCjyEl4YHDdCOhaWJOOxlPxGoHdZqPYTSGUZqSQov5aIDjSTbnrpopbFUl5qDOqhmT66aWSjVKxgxDFZr0aSQhmdDDHKEM+4wiYs1uhBVzGh/A1psZKQIegc+pXvI1lquhySL1kgO/l8wL5aKCOkA82JgrZjKW8GmkxQ+W8sMgI9Kn4LYzgs/USPSZsSMJ7ogPL1UpHFsDYZZJ74VnADmoYfP1XkS5NsXhuDJlFLEzUcwovFXO47JG+KywVXoJPkoQFMQW06RcQheUFc0ZRBlQ4y6gZUZtWjTVaKK3YLmkEr7bTxkAoyVSvT68nPE9p4jI/NUpPJoCZZoz4lYGofEwywVJo1x3g9AeyUqouaZCeWpHpdgdquowJpVhXj9QRwWaoKtckd4g9PfaIT5Eorn4uJlkrVfm2yRe2cIIx9BTjJoA40izcM0E+Adg6oB8JTI1AvHXwkSJBuzpAoVXUOybNqbwO36GMMGCfAA46QxHy+6kDjSRZ5xMlFA0agcXgl6Y0+TPL46ZCECiyl2WSwjuUkKZ+iBbUphfNEYn/mybHFfHJMAjSxHgu7MjhH+M+gb9lLAYWiPeyjnOt8NrrwxylhF4XR7HGuGr5kASBMC+XkkUM2q9lKOfcY/Z9/RX4RIjzzczcdyd/OOJ8HoPQv7wAAAABJRU5ErkJggg=="/>
+    </pattern>
+    <clipPath id="clip-bbc">
+      <rect width="280" height="160"/>
+    </clipPath>
+  </defs>
+  <g id="bbc" class="cls-1">
+    <rect class="cls-3" width="280" height="160"/>
+    <g id="image">
+      <path id="Path_394" data-name="Path 394" d="M0,0H280V160H0Z"/>
+    </g>
+    <rect id="bbc-blocks-light" class="cls-2" width="102" height="30" transform="translate(89 65)"/>
+  </g>
+</svg>

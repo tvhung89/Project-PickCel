@@ -1,0 +1,18 @@
+.modal.fade.ads__display-add.show#display-modal
+    .modal-dialog.modal-lg
+        .modal-content
+            .modal-header
+                h3.modal-title Add Display
+                a(href="#" data-dismiss="modal")
+                    i.icon-close
+            .modal-body
+                img(src="./images/add-display.png" alt="Add Display")
+                p Enter registration code as shown on the display
+                .input-group
+                    .input-group-prepend
+                        .input-group-text Code
+                    input.form-control(type="text" maxlength="6" required placeholder="Enter registration code")
+            .modal-footer
+                button.btn.btn-primary.rounded(type="button" data-dismiss="modal") Cancel
+                button.btn.btn-success.rounded(type="button" data-dismiss="modal") Add
+                            

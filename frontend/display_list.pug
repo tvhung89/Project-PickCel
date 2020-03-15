@@ -1,0 +1,231 @@
+extends layouts/_dashboard-layout.pug
+
+block content
+    include includes/_add-display-modal.pug
+    .ads__right-content
+        .ads__display
+            .ads__top-bar
+                button.btn.btn-primary.rounded(type="button" data-toggle="modal" data-target="#display-modal")
+                    i.icon-plus
+                    span Add display
+                .ads__search-box
+                    input(type="text" placeholder="Search...")
+                    i.icon-search
+            .ads__display_grid
+                .ads__display_list
+                    table#display_list
+                        thead
+                            tr
+                                th Display Name
+                                th Current Schedule
+                                th Last Seen Online
+                                th Content Status
+                                th Network Status
+                        tbody
+                            tr
+                                td Linux Ubuntu
+                                td No Schedule
+                                td 21 Aug, 2019, 04:01 PM
+                                td
+                                    i.icon-close
+                                td
+                                    .network-status.off.d-none
+                                    .network-status.on
+                    .foot
+                        p 1 asset
+                        ul.pagination
+                            li.page-item
+                                a.page-link(href="#")
+                                    i.icon-angle-double-left
+                            li.page-item
+                                a.page-link(href="#")
+                                    i.icon-angle-left
+                            li.page-item.active
+                                a.page-link(href="#") 1
+                            li.page-item
+                                a.page-link(href="#") 2
+                            li.page-item
+                                a.page-link(href="#") 3
+                            li.page-item.disabled
+                                a.page-link(href="#")
+                                    i.icon-angle-double-right
+                            li.page-item.disabled
+                                a.page-link(href="#")
+                                    i.icon-angle-right
+                .ads__display_detail.d-none
+                    .ads__display_detail-header
+                        h4.off
+                            span Linux Ubuntu
+                            a(href="#")
+                                i.icon-pencil
+                        a(href="#")
+                            i.icon-close
+                        p
+                            i.icon-location-pin
+                            span : Vietnam
+                    .ads__display_detail-content
+                        ul.nav.nav-tabs
+                            li.nav-item
+                                a.nav-link.active(data-toggle="tab" href="#content") Content
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#device-info") Device Info
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tags") Tags
+                            .right-icons
+                                a(href="#")
+                                    i.icon-settings
+                        .tab-content
+                            .tab-pane.fade.show.active#content
+                                .detail-block
+                                    h4
+                                        span Currently Playing
+                                        a(href="#")
+                                            i.icon-eye
+                                    p
+                                        span Composition
+                                        span :Code
+                                    p
+                                        span Type
+                                        span :Default Composition
+                                .detail-block
+                                    h4
+                                        span Currently Playing
+                                        a(href="#")
+                                            i.icon-eye
+                                        a(href="#")
+                                            i.icon-pencil
+                                    p
+                                        span Name
+                                        span :Code
+                                    p
+                                        span Version
+                                        span :3
+                                .detail-block
+                                    h4
+                                        span Active Schedule
+                                    p Currently, no schedule associated
+                                    p
+                                        span Name
+                                        span :Schedule - 22-Aug-19 11:07
+                                    p
+                                        span Version
+                                        span 1
+                                    p
+                                        span Schedule Start Time
+                                        span :22 Aug, 2019, 7:00 AM
+                                    p
+                                        span Schedule End Time
+                                        span :31 Aug, 2019, 1:30 PM
+                            .tab-pane.fade#device-info
+                                .detail-block
+                                    h4
+                                        span Current Status
+                                    p
+                                        span Last Network Speed
+                                        span :Not Available
+                                    p
+                                        span Private IP
+                                        span :10.10.1.10
+                                    p
+                                        span Public IP
+                                        span :113.190.242.76
+                                    p
+                                        span APK Version
+                                        span :Not Available
+                                    p
+                                        span Javascript Version
+                                        span :1
+                                    p
+                                        span SDK Version (android)
+                                        span :Not Available
+                                    p
+                                        span Available Storage
+                                        span :Not Available
+                                    p
+                                        span Available RAM
+                                        span :Not Available
+                                .detail-block
+                                    h4
+                                        span Hardware Details
+                                    p
+                                        span Brand
+                                        span :Not Available
+                                    p
+                                        span Device
+                                        span :Not Available
+                                    p
+                                        span Manufacturer
+                                        span :Not Available
+                                    p
+                                        span Hardware
+                                        span :Not Available
+                                    p
+                                        span Model
+                                        span :Not Available
+                                    p
+                                        span Total Storage
+                                        span :Not Available
+                                    p
+                                        span Total RAM
+                                        span :Not Available
+                            .tab-pane.fade#tags
+                                .form-row
+                                    .col-sm-4
+                                        label(for="key") Key
+                                        input.form-control#key(type="text")
+                                    .col-sm-4
+                                        label(for="val") Value
+                                        input.form-control#val(type="text")
+                                    .col-auto
+                                        button.btn.btn-primary.rounded(type="button") Update
+                                p * Avoid adding standard keys (ex: name, current schedule)
+                                table.table
+                                    thead
+                                        tr
+                                            th #
+                                            th Key
+                                            th Value
+                                            th Action
+                                    tbody
+                                        tr
+                                            td 1
+                                            td demo
+                                            td Demo Value
+                                            td
+                                                a(href="#")
+                                                    i.icon-close
+                                                a(href="#")
+                                                    i.icon-note
+                .ads__display_detail.d-none
+                    .ads__display_detail-popup.ads__display_detail-settings
+                        h4
+                            a(href="#")
+                                i.icon-arrow-left-line
+                            span Settings
+                        .ads__display_detail-main
+                            p Orientation
+                            .radio-list
+                                .radio
+                                    input.form-control#horizontal(type="radio" checked name="orientation")
+                                    label(for="horizontal") Horizontal
+                                .radio
+                                    input.form-control#vertical(type="radio" name="orientation")
+                                    label(for="vertical") Vertical
+                            button.btn.btn-success.rounded(type="button") Update
+                .ads__display_detail
+                    .ads__display_detail-popup.ads__display_detail-info
+                        h4
+                            a(href="#")
+                                i.icon-arrow-left-line
+                            span Basic Details
+                        .ads__display_detail-main
+                            .form-group
+                                label(for="displayName") Display name
+                                input.form-control#displayName(type="text" name="displayName" placeholder="Enter display name")
+                            .form-group
+                                label(for="completeAddress") Complete Address
+                                input.form-control#completeAddress(type="text" name="displayName" placeholder="Enter complete address")
+                            .form-group
+                                label(for="googleLocation") Google Location
+                                input.form-control#googleLocation(type="text" name="googleLocation" placeholder="Enter a location")
+                            button.btn.btn-success.rounded(type="button") Update

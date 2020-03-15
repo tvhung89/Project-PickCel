@@ -1,0 +1,196 @@
+$pre: 'ads__template';
+
+.#{$pre} {
+    height: 100%;
+
+    > form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background-color: $lighter-gray-color;
+        padding: 15px;
+        height: 100%;
+    }
+
+    .#{$pre}-left {
+        padding: 15px;
+        background-color: $white;
+
+        &.one {
+            width: 100%;
+        }
+
+        &.two {
+            width: 70%;
+        }
+
+        .#{$pre}-header {
+            border-bottom: 1px solid $light-gray-color;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            h2 {
+                @extend %muli-bold;
+            }
+    
+            .form-group {
+                label {
+    
+                }
+                
+                .form-control {
+                    height: 2.25rem;
+                }
+            }
+        }    
+    
+        .#{$pre}-body {
+            width: 100%;
+
+            .#{$pre}-info {
+                text-align: center;
+                margin-bottom: 10px;
+
+                button {
+                    margin: 0 auto;
+                }
+            }
+    
+            .#{$pre}-handler-wrapper {
+                max-height: 600px;
+                padding-left: 10px;
+
+                .#{$pre}-handler {
+                    width: 640px;
+                    height: 480px;
+                    outline: 5px solid $dark-gray;
+                    margin: 15px auto 0;
+                    background-image: linear-gradient(to right, #b0b0b0 1px, transparent 1px),
+                    linear-gradient(to bottom, #b0b0b0 1px, transparent 1px);
+                    background-size: 16px 9px;
+                    position: relative;
+                    margin-bottom: 10px;
+    
+                    &.no-grid {
+                        background-image: none;
+                    }
+    
+                    .handler-drag {
+                        width: 160px;
+                        height: 90px;
+                        outline: 1px solid $grey-color;
+                        background-color: $alpha-gray-color;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        justify-content: center;
+                        align-items: center;
+                        touch-action: none;
+                        box-sizing: border-box;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        user-select: none;
+                        max-width: 100%;
+                        max-height: 100%;
+    
+                        &.selected {
+                            outline-color: $primary-color;
+                            background-color: $alpha-primary-color;
+                        }
+    
+                        span {
+                            pointer-events: none;
+                        }
+                    }
+
+                    &:after {
+                        content: 'a';
+                        position: absolute;
+                        right: -10px;
+                        @include opacity(0);
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .#{$pre}-right {
+        width: 30%;
+        padding: 15px;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-left: 15px;
+
+        h3 {
+            @extend %muli-bold;
+        }
+
+        .#{$pre}-details {
+            .input-group {
+                margin-bottom: 15px;
+                .input-group-prepend {
+                    .input-group-text {
+                        width: 60px;
+                        font-size: $global-text-size;
+                        text-align: center;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        .#{$pre}-layers {
+            .#{$pre}-container {
+                height: 500px;
+                overflow: hidden;
+                overflow-y: visible;
+                .#{$pre}-layer {
+                    position: relative;
+                    background-color: $gray-color;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border: 2px solid transparent;
+    
+                    p {
+                        margin: 0;
+                        pointer-events: none;
+                    }
+    
+                    a {
+                        position: absolute;
+                        color: $primary-color;
+                        font-size: $normal-text-size;
+                        top: 50%;
+                        right: 10px;
+                        transform: translate(0, -50%);
+                    }
+
+                    &.selected {
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .#{$pre}-btns {
+            margin-top: 20px;
+
+            .btn {
+                margin-right: 10px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@for $z from 0 to 100 {
+    .zIndex-#{$z} {
+        z-index: $z; 
+    }
+}

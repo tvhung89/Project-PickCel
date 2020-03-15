@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloud Based Digital Signage Provider</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico"></head>
+  <body>
+<div class="modal fade ads__change-password ads__display-add show" id="change-password">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Change Password</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body left">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="oldPassword">Old password:</label>
+            <input class="form-control" id="oldPassword" type="text" placeholder="Please enter old password *">
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Old password:</label>
+            <input class="form-control" id="newPassword" type="text" placeholder="Please enter new password (minimum 6 characters) *">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm new password:</label>
+            <input class="form-control" id="confirmPassword" type="text" placeholder="Please repeat the new password *">
+          </div>
+          <button class="btn btn-success rounded" type="button" data-dismiss="modal">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ads__head">
+  <div class="ads__logo"><img src="./images/logo.png" alt="Logo"></div>
+  <div class="ads__user">
+    <div class="dropdown"><a class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">misovaiw@omegafive.net</a>
+      <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#change-password"><i class="icon-unlock"></i><span>Change password</span></a><a class="dropdown-item" href="#"><i class="icon-logout"></i><span>Logout</span></a></div>
+    </div>
+  </div>
+</div>
+    <div class="ads__body">
+      <div class="ads__left-bar">
+        <ul>
+          <li><a href="display_list.html"><i class="icon-monitor"></i><span>Display</span></a></li>
+          <li><a href="assets.html"><i class="icon-image"></i><span>Assets</span></a></li>
+          <li><a href="composition.html"><i class="icon-layout"></i><span>Composition</span></a></li>
+          <li><a href="template.html"><i class="icon-layout"></i><span>Template</span></a></li>
+          <li><a href="scheduler.html"><i class="icon-calendar"></i><span>Schedule</span></a></li>
+          <li><a href="app.html"><i class="icon-grid"></i><span>App</span></a></li>
+        </ul>
+      </div>
+<div class="modal fade ads__display-add ads__copy-modal show" id="copy-modal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Copy Compoosition: ttt</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Name</div>
+          </div>
+          <input class="form-control" type="text" required placeholder="Enter new name">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary rounded" type="button" data-dismiss="modal">Close</button>
+        <button class="btn btn-success rounded" type="button" data-dismiss="modal">Confirm to Copy</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade ads__display-add ads__quick-play-modal show" id="quick-play-modal">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Quick Play</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body left">
+        <form class="row" action="#" method="post">
+          <div class="col-6 form-group">
+            <label for="qpName">Name</label>
+            <input class="form-control" id="qpName" type="text" placeholder="Enter quick play name *">
+          </div>
+          <div class="col-6 form-group">
+            <label for="qpTime"><span>Time </span><small>(in minutes)</small></label>
+            <input class="form-control" id="qpTime" type="number" value="10">
+          </div>
+        </form>
+        <div class="display-list">
+          <div class="ads__search-box">
+            <input type="text" placeholder="Search Display..."><i class="icon-search"></i>
+          </div>
+          <div class="display-list-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="checkbox">
+                      <input class="form-control" id="all" type="checkbox" checked>
+                      <label for="all">&nbsp;</label>
+                    </div>
+                  </th>
+                  <th>Display Name</th>
+                  <th>last Sync</th>
+                  <th>Network Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> 
+                    <div class="checkbox">
+                      <input class="form-control" type="checkbox" checked id="first1">
+                      <label for="first1">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Linux Ubuntu</td>
+                  <td>23 Aug, 2019, 11:21 AM</td>
+                  <td> 
+                    <div class="network-status off"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td> 
+                    <div class="checkbox">
+                      <input class="form-control" type="checkbox" checked id="first2">
+                      <label for="first2">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Linux Ubuntu</td>
+                  <td>23 Aug, 2019, 11:21 AM</td>
+                  <td> 
+                    <div class="network-status off"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td> 
+                    <div class="checkbox">
+                      <input class="form-control" type="checkbox" checked id="first3">
+                      <label for="first3">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Linux Ubuntu</td>
+                  <td>23 Aug, 2019, 11:21 AM</td>
+                  <td> 
+                    <div class="network-status off"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td> 
+                    <div class="checkbox">
+                      <input class="form-control" type="checkbox" checked id="first4">
+                      <label for="first4">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Linux Ubuntu</td>
+                  <td>23 Aug, 2019, 11:21 AM</td>
+                  <td> 
+                    <div class="network-status off"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td> 
+                    <div class="checkbox">
+                      <input class="form-control" type="checkbox" checked id="first5">
+                      <label for="first5">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Linux Ubuntu</td>
+                  <td>23 Aug, 2019, 11:21 AM</td>
+                  <td> 
+                    <div class="network-status off"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success rounded" type="button" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="ads__right-content">
+        <div class="ads__display">
+          <div class="ads__top-bar"><a class="btn btn-primary rounded" href="edit-composition.html"><i class="icon-plus"></i><span>Create Composition</span></a>
+            <div class="ads__search-box">
+              <input type="text" placeholder="Search..."><i class="icon-search"></i>
+            </div>
+          </div>
+          <div class="ads__display_grid">
+            <div class="ads__display_list type-2">
+              <div class="table-content">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Content Name</th>
+                      <th>Aspect Ratio</th>
+                      <th>Creation Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ttt</td>
+                      <td>1920*1080</td>
+                      <td>21 Aug, 2019, 6:30 PM</td>
+                    </tr>
+                    <tr>
+                      <td>demo</td>
+                      <td>9:16</td>
+                      <td>21 Aug, 2019, 6:30 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Code</td>
+                      <td>16:9</td>
+                      <td>21 Aug, 2019, 6:30 PM</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>2 assets</p>
+            </div>
+            <div class="ads__display_detail">
+              <div class="ads__display_detail-content">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#content">Content</a></li>
+                  <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tags">Tags</a></li>
+                  <div class="right-icons"><a class="red" href="#quick-play-modal" data-toggle="modal"><i class="icon-desktop"></i></a><a href="#copy-modal" data-toggle="modal"><i class="icon-files"></i></a><a href="#"><i class="icon-pencil"></i></a><a href="#"><i class="icon-trash"></i></a><a href="#"><i class="icon-close"></i></a></div>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="content">
+                    <div class="detail-block">
+                      <div class="preview"><a href="#"><img src="./images/weather.svg" alt="preview"><span class="mask"></span><span class="play-btn"></span></a></div>
+                    </div>
+                    <div class="detail-block">
+                      <h4><span>Composition</span></h4>
+                      <p><span>Name</span><span>: ttt</span></p>
+                      <p><span>Version</span><span>: 1</span></p>
+                      <p><span>Duration</span><span>: 20 Seconds</span></p>
+                      <p><span>Modified Time</span><span>:21 Aug, 2019, 3:58: PM</span></p>
+                      <p><span>Aspect Ratio</span><span>: 1920*1080</span></p>
+                      <p><span>Screen Type</span><span>: horizontal</span></p>
+                    </div>
+                    <div class="detail-block">
+                      <h4><span>Active In Schedules</span></h4>
+                      <p>Sch - 22-Aug-19 11:07</p>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="tags">
+                    <div class="form-row">
+                      <div class="col-sm-4">
+                        <label for="key">Key</label>
+                        <input class="form-control" id="key" type="text">
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="val">Value</label>
+                        <input class="form-control" id="val" type="text">
+                      </div>
+                      <div class="col-auto">
+                        <button class="btn btn-primary rounded" type="button">Update</button>
+                      </div>
+                    </div>
+                    <p>* Avoid adding standard keys (ex: name, options, etc)</p>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Key</th>
+                          <th>Value</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>demo</td>
+                          <td>Demo Value</td>
+                          <td><a href="#"><i class="icon-close"></i></a><a href="#"><i class="icon-note"></i></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.6.1/dist/interact.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
+    <script src="./js/calendar.js"></script>
+    <script src="./js/datepicker.js"></script>
+    <script src="./js/sortable.js"></script>
+    <script src="./js/zone.js"></script>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>

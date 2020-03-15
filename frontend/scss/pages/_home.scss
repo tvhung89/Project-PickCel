@@ -1,0 +1,113 @@
+$pre: 'ads__home';
+
+.#{$pre} {
+  padding-top: 30px;
+
+  @include media(tablet) {
+    padding-top: 80px;
+  }
+
+  .#{$pre}-ads {
+    width: 70%;
+    margin: 0 auto;
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin: 20px 0;
+
+      @include opacity(0.5);
+    }
+
+    .#{$pre}-carousel {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  .#{$pre}-form {
+    width: 85%;
+    margin: 0 auto;
+
+    @include media(tablet) {
+      width: 75%;
+    }
+
+    .#{$pre}-logo {
+      margin-bottom: 20px;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 200px;
+      }
+    }
+
+    .#{$pre}-form-auth {
+      h2 {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .card {
+        padding: 10%;
+
+        &.small-box {
+          padding: 30px 30px 10px;
+        }
+
+        form {
+          .form-group {
+            position:relative;
+
+            &.forgot-password {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+            }
+
+            .btn {
+              margin-bottom: 20px;
+
+              &.disabled {
+                pointer-events: none;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              img {
+                max-width: 15px;
+                margin-right: 10px;
+              }
+
+              &.btn-social-login {
+                background-color: $white;
+                color: $text-color;
+                border-color: $light-gray-color;
+              }
+            }
+
+            p {
+              span {
+                margin-right: 5px;
+              }
+            }
+
+            .input-group-append {
+              cursor: pointer;
+
+              .input-group-text {
+                background-color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

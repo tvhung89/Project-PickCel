@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .slider .zone {
+            position: absolute;
+        }
+
+        .slider .zone .zone-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider .zone .zone-wrapper .slide {
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .slider .zone .zone-wrapper .slide img,
+        .slider .zone .zone-wrapper .slide video,
+        .slider .zone .zone-wrapper .slide iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        .show {
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider" id="slider">
+        
+    </div>
+
+    <script>
+        window.onload = function () {
+            var tempDuration = 0
+            var slider = document.getElementById('slider');
+
+            function initSlider(selector, idx) {
+                var slides = document.querySelectorAll(selector + ' .zone-wrapper .slide');
+                for (var j = 0; j < slides.length; j++) {
+                    slides[j].classList.remove('show')
+                    var vid = slides[j].querySelector('video')
+                    var iframe = slides[0].querySelector('iframe');
+
+                    if (iframe) iframe.src = iframe.src;
+                    if (vid) {
+                        vid.load()
+                    }
+                }
+                if (slides.length > 1) {
+                    if (idx < slides.length) {
+                        slides[idx].classList.add('show');
+                        var video = slides[idx].querySelector('video');
+                        var iframe = slides[idx].querySelector('iframe');
+
+                        if (video) video.play();
+                        if (iframe) iframe.src = iframe.src;
+
+                        tempDuration = parseInt(slides[idx].getAttribute('data-duration'), 10);
+
+                        setTimeout(function () {
+                            initSlider(selector, idx + 1)
+                        }, tempDuration * 1000);
+                    } else {
+                        slides[0].classList.add('show');
+                        var video = slides[0].querySelector('video');
+                        var iframe = slides[0].querySelector('iframe');
+
+                        if (video) video.play();
+                        if (iframe) iframe.src = iframe.src;
+
+                        tempDuration = parseInt(slides[0].getAttribute('data-duration'), 10);
+                        setTimeout(function () {
+                            initSlider(selector, 1)
+                        }, tempDuration * 1000);
+                    }
+                } else {
+                    slides[0].classList.add('show')
+                    var video = slides[0].querySelector('video');
+                    var iframe = slides[0].querySelector('iframe');
+
+                    if (video) video.play();
+                    if (iframe) iframe.src = iframe.src;
+
+                    tempDuration = parseInt(slides[0].getAttribute('data-duration'), 10);
+                    setTimeout(function () {
+                        initSlider(selector, 1)
+                    }, tempDuration * 1000);
+                }
+            }
+
+            var composition = JSON.parse(localStorage.getItem('CURRENT_COMPOSITION'))
+            var isCustom = composition.width > 16 && composition.height > 16;
+            var zones = composition && composition.zones && composition.zones.length > 0 ? composition.zones : []
+            var htmlContent = ''
+            zones.forEach(function (zone, zoneIndex) {
+                var isCustomZone = zone.top <= 100 && zone.left <= 100 && zone.width <= 100 && zone.height <= 100;
+                var top = isCustom && !isCustomZone ? zone.top/composition.height*100 : zone.top
+                var left = isCustom && !isCustomZone ? zone.left/composition.width*100 : zone.left
+                var width = isCustom && !isCustomZone ? zone.width/composition.width*100 : zone.width
+                var height = isCustom && !isCustomZone ? zone.height/composition.height*100 : zone.height
+
+                htmlContent += '<div class="zone" id="zone'+zoneIndex+'" style="top: '+ top +'%; left: '+ left +'%; width: '+ width +'%;height: '+ height +'%;z-index:'+zone.z_index+'"><div class="zone-wrapper">';
+                zone.assets.sort(function(a, b) {return a.z_index - b.z_index}).forEach(function(a, aIndex) {
+                    htmlContent += '<div class="slide" data-duration="'+a.playbackDuration+'">';
+
+                    if (a.type == 0) {
+                        htmlContent += '<img src="'+a.content+'"/>'
+                    } else if (a.type == 1) {
+                        htmlContent += '<video src="'+a.content+'"/>'
+                    } else {
+                        htmlContent += a.content
+                    }
+
+                    htmlContent += '</div>';
+                })
+                htmlContent += '</div></div>'
+            })
+
+            slider.innerHTML = htmlContent;
+
+            setTimeout(function() {
+                zones.forEach(function (zone, zoneIndex) {
+                    initSlider('#zone' + zoneIndex, 0);
+                });
+            }, 1000)
+        };
+    </script>
+
+</body>
+
+</html>

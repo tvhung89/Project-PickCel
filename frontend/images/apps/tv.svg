@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 280 160">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #00bcd4;
+      }
+
+      .cls-4 {
+        fill: #fefefe;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_23" data-name="Rectangle 23" width="280" height="160"/>
+    </clipPath>
+  </defs>
+  <g id="tv" class="cls-1">
+    <rect class="cls-2" width="280" height="160"/>
+    <g id="tv-2" data-name="tv" class="cls-1">
+      <rect id="Rectangle_22" data-name="Rectangle 22" class="cls-2" width="280" height="160"/>
+      <path id="Path_394" data-name="Path 394" class="cls-3" d="M0,0H280V160H0Z"/>
+    </g>
+    <g id="tv_1_" data-name="tv (1)" transform="translate(79.373 9.093)">
+      <g id="Group_526" data-name="Group 526" transform="translate(0 27.539)">
+        <g id="Group_523" data-name="Group 523">
+          <path id="Path_561" data-name="Path 561" class="cls-4" d="M0,27.539v77.935H120.545V27.539Zm117.133,74.526H3.413V30.952H117.132S117.133,102.065,117.133,102.065Z" transform="translate(0 -27.539)"/>
+        </g>
+        <g id="Group_524" data-name="Group 524" transform="translate(37.537 81.748)">
+          <path id="Path_562" data-name="Path 562" class="cls-4" d="M62.78,170.128h44.094v-5.866H62.78Z" transform="translate(-62.78 -164.262)"/>
+        </g>
+        <g id="Group_525" data-name="Group 525" transform="translate(51.472 21.664)">
+          <path id="Path_563" data-name="Path 563" class="cls-4" d="M87.011,98.317a1.614,1.614,0,0,0,1.706-.218L107.8,82.356a1.6,1.6,0,0,0,0-2.476L88.717,64.137a1.609,1.609,0,0,0-2.63,1.239V96.857A1.617,1.617,0,0,0,87.011,98.317ZM89.3,68.787l14.949,12.33L89.3,93.452Z" transform="translate(-86.087 -63.771)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+extends layouts/_dashboard-layout.pug
+
+block content
+    include includes/_add-display-modal.pug
+    .ads__right-content
+        .ads__display
+            .ads__top-bar
+                a.btn.btn-primary.rounded(href="scheduler_list.html")
+                    i.icon-plus
+                    span Create Schedule
+                .ads__search-box
+                    input(type="text" placeholder="Search...")
+                    i.icon-search
+            .ads__display_grid
+                .ads__display_list
+                    table
+                        thead
+                            tr
+                                th #
+                                th Name
+                                th Schedule Version
+                                th No. of Compositions
+                                th Displays Assigned
+                                th Start Date
+                                th End Date
+                                th Options
+                        tbody
+                            tr
+                                td 1
+                                td Sch - 23-Aug-19 15:07
+                                td 1
+                                td 1
+                                td 0
+                                td 23 Aug, 2019, 12:00 AM
+                                td 23 Aug, 2019, 12:00 PM
+                                td
+                                    a(href="scheduler_list.html")
+                                        i.icon-pencil
+                                    a(href="#")
+                                        i.icon-monitor
+                                    a(href="#")
+                                        i.icon-trash
+                    .foot
+                        p 2 Schedules
+                        ul.pagination
+                            li.page-item
+                                a.page-link(href="#")
+                                    i.icon-angle-double-left
+                            li.page-item
+                                a.page-link(href="#")
+                                    i.icon-angle-left
+                            li.page-item.active
+                                a.page-link(href="#") 1
+                            li.page-item
+                                a.page-link(href="#") 2
+                            li.page-item
+                                a.page-link(href="#") 3
+                            li.page-item.disabled
+                                a.page-link(href="#")
+                                    i.icon-angle-double-right
+                            li.page-item.disabled
+                                a.page-link(href="#")
+                                    i.icon-angle-right

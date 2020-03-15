@@ -1,0 +1,50 @@
+$pre: 'ads__head';
+$logo: 'ads__logo';
+$user: 'ads__user';
+
+.#{$pre} {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  border-bottom: 1px solid $light-gray-color;
+
+  .#{$logo} {
+    img {
+      max-width: 120px;
+      margin-left: 10px;
+    }
+  }
+
+  .#{$user} {
+    .dropdown {
+      .dropdown-toggle {
+        background-color: $white;
+        color: $text-color;
+        height: 100%;
+        -webkit-appearance: none;
+        cursor: pointer;
+        padding: 15px;
+        border-left: 1px solid $light-gray-color;
+        border-radius: 0;
+      }
+
+      .dropdown-menu {
+        padding: 0;
+        min-width: 180px;
+
+        .dropdown-item {
+          border-bottom: 1px solid $light-gray-color;
+          font-size: $global-text-size;
+          padding: 7px 10px;
+
+          i {
+            margin-right: 10px;
+            font-size: $global-text-size;
+          }
+        }
+      }
+    }
+  }
+}

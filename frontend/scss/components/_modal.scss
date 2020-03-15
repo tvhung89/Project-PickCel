@@ -1,0 +1,923 @@
+$modal: 'modal';
+$welcome: 'ads__welcome-modal';
+$guide: 'ads__guide-modal';
+$addDisplay: 'ads__display-add';
+$upload: 'ads__upload';
+$toast: 'ads__toast';
+$searchBox: 'ads__search-box';
+$addSchedule: 'ads__add-schedule';
+$template: 'ads__template-modal';
+$preview: 'ads__modal-preview';
+$assignDisplay: 'ads__assign-display-modal';
+$assignComp: 'ads__assign-composition-modal';
+$troubleshoot: 'ads__trubleshoot';
+
+.#{$welcome} {
+  .modal-body {
+    > h1 {
+      text-align: center;
+
+      span {
+        &:first-child {
+          color: $primary-color;
+        }
+      }
+    }
+
+    > h4 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .#{$welcome}__form {
+      display: flex;
+      flex-direction: row;
+
+      .#{$welcome}__left {
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media(mobileonly) {
+          display: none;
+        }
+
+        img {
+          max-width: 250px;
+          margin-right: 20px;
+        }
+      }
+
+      .#{$welcome}__right {
+        flex-basis: 60%;
+
+        @include media(mobileonly) {
+          flex-basis: 100%;
+        }
+
+        .form-group {
+          &.d-flex {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
+
+.#{$guide} {
+  .modal-body {
+    .#{$guide}__content {
+      img {
+        width: 87%;
+        margin: 20px auto;
+        display: block;
+      }
+
+      .#{$guide}__steps {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .step {
+          text-align: center;
+          margin: 0 14px;
+          flex-basis: 25%;
+
+          p {
+            margin-bottom: 5px;
+
+            &:first-child {
+              color: $light-gray-color;
+            }
+          }
+        }
+      }
+    }
+
+    .btn {
+      margin: 20px auto 0;
+      display: block;
+    }
+  }
+}
+
+.#{$addDisplay} {
+  .modal-header {
+    padding: 10px 15px;
+    background-color: $gray-color;
+
+    a {
+      color: $text-color;
+      font-size: $normal-text-size;
+
+      &:hover {
+        color: $primary-color;
+        text-decoration: none;
+      }
+    }
+
+    h3 {
+      > a {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .modal-body {
+    text-align: center;
+
+    &.left {
+      text-align: left;
+    }
+
+    &.no-padding {
+      padding: 0;
+    }
+
+    img {
+      width: 70%;
+      margin: 15px 0;
+    }
+
+    > p {
+      margin-bottom: 20px;
+    }
+
+    form {
+      .btn {
+        margin: auto 0 auto auto;
+        display: block;
+      }
+    }
+
+    .display-list {
+      text-align: right;
+      .#{$searchBox} {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      &-table {
+        max-height: 200px;
+        overflow: hidden;
+        overflow-y: visible;
+        table {
+          text-align: left;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.#{$upload} {
+  .modal-body {
+      .form-group {
+        input {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+          position: absolute;
+
+          @include opacity(0);
+        }
+
+        img {
+          width: 70%;
+          margin: 5% auto;
+          display: block;
+          border: dashed 2px #979797;
+        }
+      }
+
+    .file-lists {
+      .file {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $light-gray-color;
+
+        &:last-child {
+          border: none;
+        }
+
+        .info {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .left {
+            padding: 0 10px;
+            img {
+              width: 30px;
+            }
+          }
+          .center {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            input {
+              border: none;
+              font-size: $normal-text-size;
+              padding: 5px 10px;
+              width: 60%;
+              min-width: 100px;
+              outline: none;
+
+              &:hover {
+                background-color: $gray-color;
+              }
+            }
+
+            p {
+              padding-left: 10px;
+            }
+          }
+          .right {
+            flex-basis: 25%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+
+            p {
+              margin: 0 10px;
+
+              a {
+                font-size: $header-text-size;
+
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+
+        .progress {
+
+        }
+      }
+    }
+  }
+}
+
+.#{$toast} {
+  .modal-body {
+    padding: 20px 50px;
+    > h1 {
+      font-size: $big-icon-text-size;
+      text-align: center;
+
+      &.danger {
+        color: $primary-color;
+      }
+
+      &.success {
+        color: $success-color;
+      }
+    }
+
+    > p {
+      font-size: $normal-text-size;
+      margin: 0;
+      strong {
+        @extend %muli-bold;
+        margin-left: 5px;
+      }
+    }
+
+    ol {
+      margin: 15px 0 0 15px;
+      padding: 0;
+      li {
+        span {
+          &:first-child {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.#{$addSchedule} {
+  .modal-body {
+    padding: 0;
+  }
+
+  .#{$addSchedule}-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    @include media(laptop) {
+      flex-direction: row;
+    }
+
+    .#{$addSchedule}-left {
+      flex-grow: 1;
+      order: 1;
+      @include media(laptop) {
+        order: 0;
+      }
+
+      padding: 15px;
+      .#{$addSchedule}-top {
+        text-align: right;
+        .#{$searchBox} {
+          display: inline-block;
+        }
+      }
+
+      .#{$addSchedule}-list {
+        padding: 10px 0;
+        margin: 10px 0;
+        border-top: 1px solid $gray-color;
+        border-bottom: 1px solid $gray-color;
+        height: 260px;
+        .#{$addSchedule}-item {
+          position: relative;
+          cursor: pointer;
+
+          label {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            padding: 10px;
+            background-color: $white;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px $shadow-gray-color;
+            border: 2px solid transparent;
+            pointer-events: none;
+
+            p {
+              margin-bottom: 5px;
+              color: $text-gray-color;
+            }
+
+            .thumb {
+              padding: 0 15px 0 0;
+              iframe {
+                width: 80px;
+                margin: 0;
+                height: 50px;
+                border: none;
+              }
+            }
+
+            .content {
+              padding-right: 15px;
+              flex-grow: 1;
+              h3 {
+                @extend %muli-bold;
+                margin-bottom: 5px;
+              }
+            }
+
+            .info {
+
+            }
+
+            .checkbox {
+              padding-left: 15px;
+              .selected {
+                i {
+                  @include opacity(0);
+                  visibility: hidden;
+                  color: $primary-color;
+                  font-size: $normal-text-size;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            label {
+              border-color: $primary-color;
+            }
+          }
+
+          input {
+            position: absolute;
+            @include opacity(0);
+            visibility: hidden;
+
+            &:checked + label {
+              border-color: $primary-color;
+
+              .checkbox {
+                .selected {
+                  i {
+                    @include opacity(1);
+                    visibility: visible;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .no-result {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 150px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .foot {
+        border: none;
+      }
+    }
+
+    .#{$addSchedule}-right {
+      background-color: $lighter-gray-color;
+      padding: 15px;
+      order: 0;
+      @include media(laptop) {
+        order: 1;
+        width: 35%;
+      }
+
+      > h2 {
+
+      }
+
+      .#{$addSchedule}-time {
+        > .form-group {
+          margin: 0 -5px;
+          .time-input {
+            padding: 0 5px;
+            label {
+
+            }
+
+            input {
+
+            }
+          }
+          .level-input {
+            padding: 10px 5px 0;
+
+            label {
+
+            }
+
+            input {
+
+            }
+          }
+        }
+
+        .#{$addSchedule}-repeater {
+          margin-top: 20px;
+          > .checkbox {
+
+          }
+
+          .#{$addSchedule}-frame {
+            margin-top: 10px;
+            > .form-group {
+              margin: 0 -5px;
+              .date-input {
+                padding: 0 5px;
+                position: relative;
+                
+                input {
+                  cursor: pointer;
+                  background-color: $white;
+                }
+
+                i {
+                  position: absolute;
+                  top: 50%;
+                  right: 15px;
+                  transform: translate(0, -50%);
+                  pointer-events: none;
+                }
+              }
+            }
+
+            .checkbox {
+              margin: 20px 0 10px;
+
+              label {
+                margin: 0;
+              }
+            }
+
+            .days {
+              position: relative;
+              display: flex;
+              flex-direction: row;
+              
+              label {
+                cursor: pointer;
+                background-color: $light-gray-color;
+                padding: 5px;
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0 3px;
+              }
+
+              input {
+                position: absolute;
+                @include opacity(0);
+                visibility: hidden;
+
+                &:checked + label {
+                  background-color: $primary-color;
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    .#{$addSchedule}-btns {
+      button {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.#{$template} {
+  > .modal-dialog {
+    max-width: 90%;
+    .modal-body {
+      .nav-list {
+        .right-icons {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+
+          .btn {
+            margin-right: 15px;
+          }
+        }
+      }
+
+      .tab-pane {
+        padding: 15px 0;
+      }
+
+      .template-rows {
+        .#{$template}-item {
+          border: 1px solid $light-gray-color;
+          border-radius: 5px;
+          margin-bottom: 20px;
+
+          &.deleting {
+            position: relative;
+            &:after {
+              content: 'Deleting...';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              z-index: 2;
+              background: $white-alpha;
+            }
+          }
+          
+          .header {
+            padding: 10px;
+            border-bottom: 1px solid $light-gray-color;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+            p {
+              margin: 0;
+              flex-grow: 1;
+            }
+
+            .dropdown {
+              > a {
+                width: 20px;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                &:after {
+                  display: none;
+                }
+  
+                span {
+                  display: block;
+                  position: relative;
+                  width: 5px;
+                  height: 5px;
+                  border-radius: 5px;
+                  background-color:$light-gray-color;
+  
+                  &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 5px;
+                    height: 5px;
+                    display: block;
+                    border-radius: 5px;
+                    background-color: $light-gray-color;
+                  }
+  
+                  &:before {
+                    top: -7px;
+                  }
+  
+                  &:after {
+                    bottom: -7px;
+                  }
+                }
+  
+                &:hover {
+                  span {
+                    background-color: $dark-gray;
+                    &:before, &:after {
+                      background-color: $dark-gray;
+                    }
+                  }
+                }
+              }
+
+              .dropdown-menu {
+                .dropdown-item {
+                  font-size: $global-text-size;
+                  min-width: 80px;
+                  i {
+                    margin-right: 5px;
+                  }
+                }
+              }
+            }
+          }
+          .preview {
+            padding: 10px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .preview-wrapper {
+              margin: 3% auto;
+              border: 3px solid $dark-gray;
+              background-color: $white;
+              box-shadow: 1px 2px 3px $light-gray-color;
+              border-radius: 5px;
+              position: relative;
+              overflow: hidden;
+
+              &.horizontal {
+                width: 70%;
+                height: 120px;
+              }
+
+              &.vertical {
+                width: 40%;
+                height: 145px;
+              }
+
+              > div {
+                border: 1px solid $alpha-red;
+                background: $dark-grey;
+              }
+            }
+          }
+          .btns {
+            border-top: 1px solid $light-gray-color;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: nowrap;
+            h4 {
+              margin: 0;
+            }
+            .links {
+              display: flex;
+              flex-direction: row;
+              flex-grow: 1;
+              justify-content: flex-end;
+              a {
+                display: inline-block;
+                background-color: $gray-color;
+                border-radius: 5px;
+                padding: 5px 10px;
+                margin-right: 10px;
+                color: $dark-gray;
+  
+                &:last-child {
+                  margin: 0;
+                }
+
+                &:hover {
+                  text-decoration: none;
+                  background-color: $primary-color;
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .modal {
+      .modal-footer {
+        .btn {
+          margin: 0 0 0 5px;
+        }
+      }
+    }
+  }
+}
+
+.#{$modal} {
+  &.disabled {
+    * {
+      pointer-events: none;
+    }
+
+    input, textarea, select {
+      @include opacity(0.5)
+    }
+  }
+}
+
+.#{$preview} {
+  opacity: 1;
+  transition: all 0.3s linear;
+  
+  &.transparent {
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+
+  .modal-dialog {
+    max-width: 60%;
+
+    &.vertical {
+      max-width: 450px;
+    }
+
+    &.asset {
+      max-width: 700px;
+
+      .modal-content {
+        max-height: inherit;
+      }
+    }
+
+    .modal-content {
+      height: 100%;
+      border-radius: 0;
+      border: 5px solid $darker-gray;
+      margin: 0 auto;
+      max-height: 90vh;
+
+      .modal-body {
+        position: relative;
+        padding: 0;
+
+        .btn-close {
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          right: 0;
+          padding: 5px;
+          background-color: $black-alpha-color;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          outline: none;
+          cursor: pointer;
+
+          i {
+            font-size: $header-text-size;
+            color: $white;
+          }
+        }
+        
+        .preview-container {
+          height: 100%;
+          img, video, iframe {
+            width: 100%;
+            display: block;
+          }
+
+          iframe {
+            border: none;
+            max-width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .playing {
+      height: 100%;
+
+      > iframe {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.#{$assignDisplay} {
+  .modal-body {
+    .display-list-table {
+      height: 250px;
+    }
+  }
+  .modal-footer {
+    > p {
+      flex-grow: 1;
+      margin: 0;
+    }
+  }
+}
+
+.#{$assignComp} {
+  .modal-dialog {
+    max-width: 90%;
+    min-width: 700px;
+    height: 90vh;
+    .modal-content {
+      height: 100%;
+      .modal-body {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.#{$troubleshoot} {
+  .modal-dialog {
+
+    @include media(laptop) {
+      max-width: 900px;
+    }
+
+    .modal-body {
+      .content {
+        min-height: 200px;
+      }
+
+      > p {
+        margin-bottom: 5px;
+      }
+
+      .group-btns {
+        button {
+          margin-right: 5px;
+          margin-bottom: 5px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          span {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

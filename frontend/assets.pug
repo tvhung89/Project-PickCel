@@ -1,0 +1,238 @@
+extends layouts/_dashboard-layout.pug
+
+block content
+    include includes/_add-display-modal.pug
+    include includes/_upload-modal.pug
+    include includes/_toast-modal.pug
+    include includes/_delete-toast-modal.pug
+    //button.btn.btn-primary.rounded(type="button" data-toggle="modal" data-target="#toast-modal") Show toast modal
+    //button.btn.btn-primary.rounded(type="button" data-toggle="modal" data-target="#delete-toast-modal") Show delete toast modal
+    .ads__right-content
+        .ads__display
+            .ads__top-bar
+                button.btn.btn-primary.rounded(type="button" data-toggle="modal" data-target="#upload-modal")
+                    i.icon-download
+                    span Upload a file
+                .ads__search-box
+                    input(type="text" placeholder="Search...")
+                    i.icon-search
+            .ads__display_grid
+                .ads__display_list.type-2
+                    ul.nav.nav-tabs
+                        li.nav-item
+                            a.nav-link.active(data-toggle="tab" href="#all") All
+                        li.nav-item
+                            a.nav-link(data-toggle="tab" href="#image") Image
+                        li.nav-item
+                            a.nav-link(data-toggle="tab" href="#video") Video
+                        li.nav-item
+                            a.nav-link(data-toggle="tab" href="#apps") Apps
+                    .tab-content
+                        .tab-pane.fade.show.active#all
+                            .table-content
+                                table
+                                    thead
+                                        tr
+                                            th Name
+                                            th Type
+                                            th Created Date
+                                    tbody
+                                        tr
+                                            td
+                                                img(src="./images/youtube.svg" alt="youtube")
+                                                span Youtube
+                                            td App
+                                            td 5/8/2019 11:37 AM
+                                        tr
+                                            td
+                                                img(src="./images/weather.svg" alt="weather")
+                                                span Weather
+                                            td App
+                                            td 5/8/2019 11:37 AM
+                                        tr
+                                            td
+                                                img(src="./images/clock.svg" alt="clock")
+                                                span Youtube
+                                            td App
+                                            td 5/8/2019 11:37 AM
+                                .foot
+                                    p 2 assets
+                                    ul.pagination
+                                        li.page-item
+                                            a.page-link(href="#")
+                                                i.icon-angle-double-left
+                                        li.page-item
+                                            a.page-link(href="#")
+                                                i.icon-angle-left
+                                        li.page-item.active
+                                            a.page-link(href="#") 1
+                                        li.page-item
+                                            a.page-link(href="#") 2
+                                        li.page-item
+                                            a.page-link(href="#") 3
+                                        li.page-item.disabled
+                                            a.page-link(href="#")
+                                                i.icon-angle-double-right
+                                        li.page-item.disabled
+                                            a.page-link(href="#")
+                                                i.icon-angle-right
+                        .tab-pane.fade#image
+                            .table-content
+                                table
+                                    thead
+                                        tr
+                                            th Name
+                                            th Size
+                                            th Dimensions
+                                            th Created Date
+                                    tbody
+                                        tr
+                                            td
+                                                img(src="./images/youtube.svg" alt="youtube")
+                                                span Youtube
+                                            td 0.22 MB
+                                            td 3840*1080
+                                            td 5/8/2019 11:37 AM
+                                        tr
+                                            td
+                                                img(src="./images/clock.svg" alt="clock")
+                                                span Youtube
+                                            td 0.13 MB
+                                            td 1919*943
+                                            td 5/8/2019 11:37 AM
+                                .foot
+                                    p 2 assets
+                                    ul.pagination
+                                        li.page-item
+                                            a.page-link(href="#")
+                                                i.icon-angle-double-left
+                                        li.page-item
+                                            a.page-link(href="#")
+                                                i.icon-angle-left
+                                        li.page-item.active
+                                            a.page-link(href="#") 1
+                                        li.page-item
+                                            a.page-link(href="#") 2
+                                        li.page-item
+                                            a.page-link(href="#") 3
+                                        li.page-item.disabled
+                                            a.page-link(href="#")
+                                                i.icon-angle-double-right
+                                        li.page-item.disabled
+                                            a.page-link(href="#")
+                                                i.icon-angle-right
+                        .tab-pane.fade#video
+                            .table-content.no-content
+                                img(src="./images/assets.svg" alt="Assets")
+                                p You can start adding your files by clicking on the upload button, The files you add can be Images, Videos, Application
+                                button.btn.btn-primary.rounded(type="button" data-toggle="modal" data-target="#upload-modal")
+                                    i.icon-download
+                                    span Upload a file
+                        .tab-pane.fade#apps
+                            .table-content
+                                table#display_list
+                                    thead
+                                        tr
+                                            th Name
+                                            th Modified Date
+                                            th Created Date
+                                    tbody
+                                        tr
+                                            td
+                                                img(src="./images/youtube.svg" alt="youtube")
+                                                span Youtube
+                                            td 5/8/2019 11:37 AM
+                                            td 5/8/2019 11:37 AM
+                                        tr
+                                            td
+                                                img(src="./images/weather.svg" alt="weather")
+                                                span Weather
+                                            td 5/8/2019 11:37 AM
+                                            td 5/8/2019 11:37 AM
+                                        tr
+                                            td
+                                                img(src="./images/clock.svg" alt="clock")
+                                                span Youtube
+                                            td 5/8/2019 11:37 AM
+                                            td 5/8/2019 11:37 AM
+                                .foot
+                                    p 2 assets
+                                    ul.pagination
+                                        li.page-item
+                                            a.page-link(href="#")
+                                                i.icon-angle-double-left
+                                        li.page-item
+                                            a.page-link(href="#")
+                                                i.icon-angle-left
+                                        li.page-item.active
+                                            a.page-link(href="#") 1
+                                        li.page-item
+                                            a.page-link(href="#") 2
+                                        li.page-item
+                                            a.page-link(href="#") 3
+                                        li.page-item.disabled
+                                            a.page-link(href="#")
+                                                i.icon-angle-double-right
+                                        li.page-item.disabled
+                                            a.page-link(href="#")
+                                                i.icon-angle-right
+                .ads__display_detail
+                    .ads__display_detail-content
+                        ul.nav.nav-tabs
+                            li.nav-item
+                                a.nav-link.active(data-toggle="tab" href="#content") Content
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tags") Tags
+                            .right-icons
+                                a(href="#")
+                                    i.icon-pencil
+                                a(href="#")
+                                    i.icon-close
+                        .tab-content
+                            .tab-pane.fade.show.active#content
+                                .detail-block
+                                    .preview
+                                        a(href="#")
+                                            img(src="./images/weather.svg" alt="preview")
+                                            span.mask
+                                            span.play-btn
+                                    p
+                                        span Name
+                                        span : Weather
+                                    p
+                                        span Type
+                                        span : Image
+                                    p
+                                        span Creation Date
+                                        span :21 Aug, 2019, 3:58: PM
+                                    p
+                                        span Modified Date
+                                        span :21 Aug, 2019, 3:58: PM
+                            .tab-pane.fade#tags
+                                .form-row
+                                    .col-sm-4
+                                        label(for="key") Key
+                                        input.form-control#key(type="text")
+                                    .col-sm-4
+                                        label(for="val") Value
+                                        input.form-control#val(type="text")
+                                    .col-auto
+                                        button.btn.btn-primary.rounded(type="button") Update
+                                p * Avoid adding standard keys (ex: name, current schedule)
+                                table.table
+                                    thead
+                                        tr
+                                            th #
+                                            th Key
+                                            th Value
+                                            th Action
+                                    tbody
+                                        tr
+                                            td 1
+                                            td demo
+                                            td Demo Value
+                                            td
+                                                a(href="#")
+                                                    i.icon-close
+                                                a(href="#")
+                                                    i.icon-note

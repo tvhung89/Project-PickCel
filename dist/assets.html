@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloud Based Digital Signage Provider</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico"></head>
+  <body>
+<div class="modal fade ads__change-password ads__display-add show" id="change-password">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Change Password</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body left">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="oldPassword">Old password:</label>
+            <input class="form-control" id="oldPassword" type="text" placeholder="Please enter old password *">
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Old password:</label>
+            <input class="form-control" id="newPassword" type="text" placeholder="Please enter new password (minimum 6 characters) *">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm new password:</label>
+            <input class="form-control" id="confirmPassword" type="text" placeholder="Please repeat the new password *">
+          </div>
+          <button class="btn btn-success rounded" type="button" data-dismiss="modal">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ads__head">
+  <div class="ads__logo"><img src="./images/logo.png" alt="Logo"></div>
+  <div class="ads__user">
+    <div class="dropdown"><a class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">misovaiw@omegafive.net</a>
+      <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#change-password"><i class="icon-unlock"></i><span>Change password</span></a><a class="dropdown-item" href="#"><i class="icon-logout"></i><span>Logout</span></a></div>
+    </div>
+  </div>
+</div>
+    <div class="ads__body">
+      <div class="ads__left-bar">
+        <ul>
+          <li><a href="display_list.html"><i class="icon-monitor"></i><span>Display</span></a></li>
+          <li><a href="assets.html"><i class="icon-image"></i><span>Assets</span></a></li>
+          <li><a href="composition.html"><i class="icon-layout"></i><span>Composition</span></a></li>
+          <li><a href="template.html"><i class="icon-layout"></i><span>Template</span></a></li>
+          <li><a href="scheduler.html"><i class="icon-calendar"></i><span>Schedule</span></a></li>
+          <li><a href="app.html"><i class="icon-grid"></i><span>App</span></a></li>
+        </ul>
+      </div>
+<div class="modal fade ads__display-add show" id="display-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Add Display</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body"><img src="./images/add-display.png" alt="Add Display">
+        <p>Enter registration code as shown on the display</p>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Code</div>
+          </div>
+          <input class="form-control" type="text" maxlength="6" required placeholder="Enter registration code">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary rounded" type="button" data-dismiss="modal">Cancel</button>
+        <button class="btn btn-success rounded" type="button" data-dismiss="modal">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade ads__upload ads__display-add show" id="upload-modal">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Upload asset(s)</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body left">
+        <form class="d-none" action="#" method="post">
+          <div class="form-group">
+            <input class="form-control" id="fileUpload" type="file" name="fileUpload" multiple><img src="./images/file-upload.png" alt="File upload">
+          </div>
+        </form>
+        <div class="file-lists">
+          <div class="file">  
+            <div class="info">
+              <div class="left"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAA8CAYAAAD2ZeOZAAAABHNCSVQICAgIfAhkiAAAA9VJREFUaIHtml1oW1UcwH//0zTN7NKWStVMWUsttcqcUWrxpSKIWGVM8GEwFIdgEaSv4vYg+CDik08dPrTg15ugD4XJOpT6MqidsFo/2Eop61ZSW7e4Ns3aXNN7fDhpa8y916TQnAj393LC+Z+b/P7nKyeHCAUeHc+/oLT7vkAn0EIVcTeyW7mbC4NXB5OfVPKc4ktdlxzPfaC0e07gCaosDoBQF3H1yEMj069X8ph6rCn/NFrOCMh+uZXFHhJQaPed/XSqiAoTUIgk99upIipIQAncWw2niigzAVUtn4rZTuDjy6/4NaldeTAJKD71S6Am5CUSDQgS8UugRuTrQUUCGngnUBPyAKqxObiBRwK1I9/chjQ0Bjf6VwKSPO/oasiVi5u9jXY20c5mQCud/0vVHwmYaHZQjS3wHwMARMR1O2tm2uyFUN4WobwtQnlbhPK2COVt4Xm2Od8vtEZhKg1Dl7VnbPx3TXZLePl+mFmFN34sPd9NPWtuU/q+25+zn2fP/7xqykeaiutP9xhxx4VzS3B34QdQk6Xjnaf8V4umpw5G4FT7bv2RJlN/LauZTMPbM5qzc5oTk3ZO1Z59NpmG2YymOy70twmfLRi5jkYpxAXQDD8u9LXCk61mep1qh5OHzegseRzHh7qEYwlojcJ6Hi7e1Lz7a2nMcU0HDc8ZFz98F+wva0a0s3C2Pt0jRJX50OG50p5+qhUGO434bEaT2yqOHz8kvNZuRnMqDZk8PH+fMNQlRbGZVbjlQHdcOPNw8A2kr/yHVzTr+d2psz1lflvzbv/MPSa5tAOvTlEylY4fMuUtx5R/5LaT1juxKxmz8F+6aJ5NxEzSfgQutfksHG2G/jahozACF5a92z5wwJQ51zve1sCOUCK2Wx9VQrzevN78x2gtbZp2h+/y9wuUH0sZ+Z44RBVcy8JYyntxLm5AX8B73bhjZLy21dFeIRGDWN1u3XaC1+/sWV7z1oNmHgNczfjvKt+vaI4ljMRor5RsnxeWIdliOmO0V4gpTUejMLGiizpptFd2Rimos6CMb9hLafOw47KzM3gxmYaJFY3jGpG1fPGOM5bSjMxr0o6Jd8eF1AZc+lMYS2k+XzCbwdFm8/0xm9F8NBu8Bdfc1Ue5bLnui//rs00ob4tQ3hahvC1CeVuE8rYI5W0RytsilLdFKG8LpeEH2xJ7QYR5JfCFbZFK0bCczjRcV9MD0bPAt7aFykVrXJCTiydkQwFMD0SfQ3gT9JxtOT80bGr011u6vvungfoJ8PgjaNc3uuFg7vaB6uv5s97Q4s5Nsc57UnQT+jeB9Ve1RUHKGgAAAABJRU5ErkJggg==" alt="Video Thumbnail"></div>
+              <div class="center">
+                <input type="text" value="feature1">
+                <p>95 KB</p>
+              </div>
+              <div class="right">
+                <p><a href="#"><i class="icon-trash"></i></a></p>
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" style="width: 25%">25%</div>
+            </div>
+          </div>
+          <div class="file">
+            <div class="info">
+              <div class="left"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAA8CAYAAAD2ZeOZAAAABHNCSVQICAgIfAhkiAAAA3hJREFUaIHtmk9oHFUYwH/fe5Nk1267aYnZQgv9Jw2RQEPFQw3EUlGxIHgSilCsEESPOVR686AWivQg6MEeDNGzJxUt0saL8Q/EWgpirdEKgXQPa5Zs2ezuzHs9vGbtambdCe7MVuZ3G773vfl9b96bP48R7mLneMbCG8B+YJAYqVRVsHirf2r8xbUPouQpa9HBHG9Z+BQ4TMziAAjawoUrM5lTUdIUXzEpcAaQLql1SuQClLW81k2jiEQqQAHjXRaKSscFKIRCHEYR6agAFZfNJtAWLvwwk3khrEEvywNohJmwAnpCvt+z4UGLF1ZAz8h7KnoBPSEPsD0XtG+wQQE9I18Y9MllTPtGfytAzBxtrlf8lCqatbpQrYePqwXfU/UxL0avjtjxb9PH4RnY3zPTZjOk8kmRyidFKp8UqXxSpPJJESrvTzTwJxqYvWfj9InE/3Pk7wc6fiX2JxrQKIL/J2RHoHYTtfw+Zvdp0Hmo3UTfeBVZuYjZfRozfNK1A6j+jF6cdrGH3sMMPe9y7kEtvQ3VXzC7pl2erSGVBfTVyVCnaCPfN9yUYWAPZs+bUF92Ra0fA3bwCcjsRVbnXdvsSDNmClOgMkj5ksu725+sXMbsOwfZEWR1Hrn9E3brEYKxL/4jecBbGEMvTrccq+Ksk+7bDoC+9jTe1zn01UnU0vlmzA4+Bbb2T4nKAnboOXc1gjKYKgQlsDVs7pFwl6jyALJysW3cFF7C7nwFu2UUZKAlTxVnMYUpbP6Ymxqr86jrJ/8aYZ13sWZl4efpymeg2XcOdB6pXIGg1CJjtk1Co4j33a6WHKksuHYbxMLozjfs+mIMStjMgdZY/07QeYJD37upEdxGSp+gfj/jFnnfMP7ha4hfwj7wMFL9Df3joxuepiu3SilfAsBum0DWfnWLdp36sovlxrH5Y9gdz2IOvAOAvn6qucDt1iNgakj5y/DzxLn1YQ7OYh484e4u9SUAN1WCMt43Q9H6guOxbn1I8SMkO4rdMoq95xmwfreK3F+vbTp1ioHj9/XrQSqfFKl8UqTySZHKJ0UqnxSpfFKk8kmRyieFwvJt0hKbwTcsKlF8mLRIZCy3BjL8oeRx3gXC9xd6DyPCCXmMqgJQR3lShJeBGwmLtWMN+Fj6OChHuQwb/AhqP2OALNnY1dqRxfA5FXmdlh9y7gAbszjWrPkBiAAAAABJRU5ErkJggg==" alt="Image Thumbnail"></div>
+              <div class="center">
+                <input type="text" value="feature1">
+                <p>95 KB</p>
+              </div>
+              <div class="right">
+                <p><a href="#"><i class="icon-trash"></i></a></p>
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" style="width: 47%">47%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success rounded" type="button">Add files</button>
+        <button class="btn btn-primary rounded" type="button">Upload</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade ads__toast show" id="toast-modal">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-body left">
+        <h1 class="success"><i class="icon-info-alt"></i></h1>
+        <p>The following assets have been uploaded</p>
+        <ol>
+          <li><span class="badge badge-success">Success</span><span>SampleVideo1280 </span></li>
+          <li><span class="badge badge-success">Success</span><span>feature1 </span></li>
+        </ol>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success rounded" type="button" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade ads__toast show" id="delete-toast-modal">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-body left">
+        <h1 class="danger"><i class="icon-info-alt"></i></h1>
+        <p> <span>Are you sure you want to delete</span><strong>'SampleVideo1280'</strong><span>?</span></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary rounded" type="button" data-dismiss="modal">Cancel</button>
+        <button class="btn btn-success rounded" type="button" data-dismiss="modal">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <!--button.btn.btn-primary.rounded(type="button" data-toggle="modal" data-target="#toast-modal") Show toast modal-->
+      <!--button.btn.btn-primary.rounded(type="button" data-toggle="modal" data-target="#delete-toast-modal") Show delete toast modal-->
+      <div class="ads__right-content">
+        <div class="ads__display">
+          <div class="ads__top-bar">
+            <button class="btn btn-primary rounded" type="button" data-toggle="modal" data-target="#upload-modal"><i class="icon-download"></i><span>Upload a file</span></button>
+            <div class="ads__search-box">
+              <input type="text" placeholder="Search..."><i class="icon-search"></i>
+            </div>
+          </div>
+          <div class="ads__display_grid">
+            <div class="ads__display_list type-2">
+              <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#all">All</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#image">Image</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#video">Video</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#apps">Apps</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="all">
+                  <div class="table-content">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Type</th>
+                          <th>Created Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="./images/youtube.svg" alt="youtube"><span>Youtube</span></td>
+                          <td>App</td>
+                          <td>5/8/2019 11:37 AM</td>
+                        </tr>
+                        <tr>
+                          <td><img src="./images/weather.svg" alt="weather"><span>Weather</span></td>
+                          <td>App</td>
+                          <td>5/8/2019 11:37 AM</td>
+                        </tr>
+                        <tr>
+                          <td><img src="./images/clock.svg" alt="clock"><span>Youtube</span></td>
+                          <td>App</td>
+                          <td>5/8/2019 11:37 AM</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="foot">
+                      <p>2 assets</p>
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#"><i class="icon-angle-double-left"></i></a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="icon-angle-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="icon-angle-double-right"></i></a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="icon-angle-right"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="image">
+                  <div class="table-content">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Size</th>
+                          <th>Dimensions</th>
+                          <th>Created Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="./images/youtube.svg" alt="youtube"><span>Youtube</span></td>
+                          <td>0.22 MB</td>
+                          <td>3840*1080</td>
+                          <td>5/8/2019 11:37 AM</td>
+                        </tr>
+                        <tr>
+                          <td><img src="./images/clock.svg" alt="clock"><span>Youtube</span></td>
+                          <td>0.13 MB</td>
+                          <td>1919*943</td>
+                          <td>5/8/2019 11:37 AM</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="foot">
+                      <p>2 assets</p>
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#"><i class="icon-angle-double-left"></i></a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="icon-angle-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="icon-angle-double-right"></i></a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="icon-angle-right"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="video">
+                  <div class="table-content no-content"><img src="./images/assets.svg" alt="Assets">
+                    <p>You can start adding your files by clicking on the upload button, The files you add can be Images, Videos, Application</p>
+                    <button class="btn btn-primary rounded" type="button" data-toggle="modal" data-target="#upload-modal"><i class="icon-download"></i><span>Upload a file</span></button>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="apps">
+                  <div class="table-content">
+                    <table id="display_list">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Modified Date</th>
+                          <th>Created Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="./images/youtube.svg" alt="youtube"><span>Youtube</span></td>
+                          <td>5/8/2019 11:37 AM</td>
+                          <td>5/8/2019 11:37 AM</td>
+                        </tr>
+                        <tr>
+                          <td><img src="./images/weather.svg" alt="weather"><span>Weather</span></td>
+                          <td>5/8/2019 11:37 AM</td>
+                          <td>5/8/2019 11:37 AM</td>
+                        </tr>
+                        <tr>
+                          <td><img src="./images/clock.svg" alt="clock"><span>Youtube</span></td>
+                          <td>5/8/2019 11:37 AM</td>
+                          <td>5/8/2019 11:37 AM</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="foot">
+                      <p>2 assets</p>
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#"><i class="icon-angle-double-left"></i></a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="icon-angle-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="icon-angle-double-right"></i></a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="icon-angle-right"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ads__display_detail">
+              <div class="ads__display_detail-content">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#content">Content</a></li>
+                  <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tags">Tags</a></li>
+                  <div class="right-icons"><a href="#"><i class="icon-pencil"></i></a><a href="#"><i class="icon-close"></i></a></div>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="content">
+                    <div class="detail-block">
+                      <div class="preview"><a href="#"><img src="./images/weather.svg" alt="preview"><span class="mask"></span><span class="play-btn"></span></a></div>
+                      <p><span>Name</span><span>: Weather</span></p>
+                      <p><span>Type</span><span>: Image</span></p>
+                      <p><span>Creation Date</span><span>:21 Aug, 2019, 3:58: PM</span></p>
+                      <p><span>Modified Date</span><span>:21 Aug, 2019, 3:58: PM</span></p>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="tags">
+                    <div class="form-row">
+                      <div class="col-sm-4">
+                        <label for="key">Key</label>
+                        <input class="form-control" id="key" type="text">
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="val">Value</label>
+                        <input class="form-control" id="val" type="text">
+                      </div>
+                      <div class="col-auto">
+                        <button class="btn btn-primary rounded" type="button">Update</button>
+                      </div>
+                    </div>
+                    <p>* Avoid adding standard keys (ex: name, current schedule)</p>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Key</th>
+                          <th>Value</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>demo</td>
+                          <td>Demo Value</td>
+                          <td><a href="#"><i class="icon-close"></i></a><a href="#"><i class="icon-note"></i></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.6.1/dist/interact.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
+    <script src="./js/calendar.js"></script>
+    <script src="./js/datepicker.js"></script>
+    <script src="./js/sortable.js"></script>
+    <script src="./js/zone.js"></script>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>

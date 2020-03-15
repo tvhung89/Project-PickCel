@@ -1,0 +1,116 @@
+extends layouts/_dashboard-layout.pug
+
+block content
+    include includes/_copy-composition-modal.pug
+    include includes/_quick-play-modal.pug
+    .ads__right-content
+        .ads__display
+            .ads__top-bar
+                a.btn.btn-primary.rounded(href="edit-composition.html")
+                    i.icon-plus
+                    span Create Composition
+                .ads__search-box
+                    input(type="text" placeholder="Search...")
+                    i.icon-search
+            .ads__display_grid
+                .ads__display_list.type-2
+                    .table-content
+                        table
+                            thead
+                                tr
+                                    th Content Name
+                                    th Aspect Ratio
+                                    th Creation Date
+                            tbody
+                                tr
+                                    td ttt
+                                    td 1920*1080
+                                    td 21 Aug, 2019, 6:30 PM
+                                tr
+                                    td demo
+                                    td 9:16
+                                    td 21 Aug, 2019, 6:30 PM
+                                tr
+                                    td Code
+                                    td 16:9
+                                    td 21 Aug, 2019, 6:30 PM
+                    p 2 assets
+                .ads__display_detail
+                    .ads__display_detail-content
+                        ul.nav.nav-tabs
+                            li.nav-item
+                                a.nav-link.active(data-toggle="tab" href="#content") Content
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#tags") Tags
+                            .right-icons
+                                a.red(href="#quick-play-modal" data-toggle="modal")
+                                    i.icon-desktop
+                                a(href="#copy-modal" data-toggle="modal")
+                                    i.icon-files
+                                a(href="#")
+                                    i.icon-pencil
+                                a(href="#")
+                                    i.icon-trash
+                                a(href="#")
+                                    i.icon-close
+                        .tab-content
+                            .tab-pane.fade.show.active#content
+                                .detail-block
+                                    .preview
+                                        a(href="#")
+                                            img(src="./images/weather.svg" alt="preview")
+                                            span.mask
+                                            span.play-btn
+                                .detail-block
+                                    h4
+                                        span Composition
+                                    p
+                                        span Name
+                                        span : ttt
+                                    p
+                                        span Version
+                                        span : 1
+                                    p
+                                        span Duration
+                                        span : 20 Seconds
+                                    p
+                                        span Modified Time
+                                        span :21 Aug, 2019, 3:58: PM
+                                    p
+                                        span Aspect Ratio
+                                        span : 1920*1080
+                                    p
+                                        span Screen Type
+                                        span : horizontal
+                                .detail-block
+                                    h4
+                                        span Active In Schedules
+                                    p Sch - 22-Aug-19 11:07
+                            .tab-pane.fade#tags
+                                .form-row
+                                    .col-sm-4
+                                        label(for="key") Key
+                                        input.form-control#key(type="text")
+                                    .col-sm-4
+                                        label(for="val") Value
+                                        input.form-control#val(type="text")
+                                    .col-auto
+                                        button.btn.btn-primary.rounded(type="button") Update
+                                p * Avoid adding standard keys (ex: name, options, etc)
+                                table.table
+                                    thead
+                                        tr
+                                            th #
+                                            th Key
+                                            th Value
+                                            th Action
+                                    tbody
+                                        tr
+                                            td 1
+                                            td demo
+                                            td Demo Value
+                                            td
+                                                a(href="#")
+                                                    i.icon-close
+                                                a(href="#")
+                                                    i.icon-note

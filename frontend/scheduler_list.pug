@@ -1,0 +1,33 @@
+extends layouts/_dashboard-layout.pug
+
+block content
+    include includes/_add-display-modal.pug
+    include includes/_add-schedule-modal.pug
+    .ads__right-content
+        .ads__scheduler_list
+            .ads__scheduler_list-calendar-wrapper
+                .ads__scheduler_list-calendar#calendar
+            .ads__scheduler_list-detail
+                .form-group
+                    label(for="scheduleName") Schedule Name
+                    input.form-control(type="text" placeholder="Enter the schedule name")
+                //- .ads__scheduler_list-items.no-schedule
+                //-     img(src="./images/screen.svg")
+                //-     h3 No displays associated with this schedule
+                .ads__scheduler_list-items
+                    table.table
+                        thead
+                            tr
+                                th #
+                                th Name
+                                th Status
+                        tbody
+                            tr
+                                td 1
+                                td Linux Ubuntu
+                                td
+                                    .network-status.off
+                .ads__scheduler_list-btns
+                    a.d-none#add-schedule-link(href="#add-schedule-modal" data-toggle="modal") Add Schedule Component
+                    button.btn.btn-primary.rounded(type="button") Update
+                    button.btn.btn-info.rounded(type="button") Save &amp; Assign Displays

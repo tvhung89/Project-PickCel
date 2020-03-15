@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloud Based Digital Signage Provider</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico"></head>
+  <body>
+<div class="modal fade ads__change-password ads__display-add show" id="change-password">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Change Password</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body left">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="oldPassword">Old password:</label>
+            <input class="form-control" id="oldPassword" type="text" placeholder="Please enter old password *">
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Old password:</label>
+            <input class="form-control" id="newPassword" type="text" placeholder="Please enter new password (minimum 6 characters) *">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm new password:</label>
+            <input class="form-control" id="confirmPassword" type="text" placeholder="Please repeat the new password *">
+          </div>
+          <button class="btn btn-success rounded" type="button" data-dismiss="modal">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ads__head">
+  <div class="ads__logo"><img src="./images/logo.png" alt="Logo"></div>
+  <div class="ads__user">
+    <div class="dropdown"><a class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">misovaiw@omegafive.net</a>
+      <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#change-password"><i class="icon-unlock"></i><span>Change password</span></a><a class="dropdown-item" href="#"><i class="icon-logout"></i><span>Logout</span></a></div>
+    </div>
+  </div>
+</div>
+    <div class="ads__body">
+      <div class="ads__left-bar">
+        <ul>
+          <li><a href="display_list.html"><i class="icon-monitor"></i><span>Display</span></a></li>
+          <li><a href="assets.html"><i class="icon-image"></i><span>Assets</span></a></li>
+          <li><a href="composition.html"><i class="icon-layout"></i><span>Composition</span></a></li>
+          <li><a href="template.html"><i class="icon-layout"></i><span>Template</span></a></li>
+          <li><a href="scheduler.html"><i class="icon-calendar"></i><span>Schedule</span></a></li>
+          <li><a href="app.html"><i class="icon-grid"></i><span>App</span></a></li>
+        </ul>
+      </div>
+      <div class="ads__app">
+        <div class="ads__app-header">
+          <div class="ads__search-box ads__app-search-box">
+            <input type="text" placeholder="Search..."><i class="icon-search"></i>
+          </div>
+        </div>
+        <div class="ads__app-content">
+          <div class="ads__filter">
+            <p> <span>Filter by category</span><a href="#"><i class="icon-eraser"></i></a><a href="#"><i class="icon-close"></i></a></p>
+            <div class="ads__filter-group">
+              <h4>Category</h4>
+              <div class="input-group">
+                <label>
+                  <input type="checkbox"><span>Social</span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label>
+                  <input type="checkbox"><span>Communication</span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label>
+                  <input type="checkbox"><span>Others</span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label>
+                  <input type="checkbox"><span>News</span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label>
+                  <input type="checkbox"><span>Business</span>
+                </label>
+              </div>
+            </div>
+            <div class="ads__filter-group">
+              <h4>Regional</h4>
+              <div class="input-group">
+                <label>
+                  <input type="checkbox"><span>Arabic</span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label>
+                  <input type="checkbox"><span>Spanish</span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label>
+                  <input type="checkbox"><span>Malayalam</span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label>
+                  <input type="checkbox"><span>Kannada</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="ads__app-list">
+            <div class="row">
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/youtube.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Youtube</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/weather.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Weather</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/facebook.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Facebook</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/streaming.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Stream</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/cnn-arabic.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>CNN Arabic News</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/bbc-mundo.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>BBC Mundo News</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/deshabhimani.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Deshabhimani</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/google-sheet.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Google Sheet</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/infobae.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Infobae</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/ticker.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Scroller</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/bbc.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>BBC</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/cnn-latina.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>CNN Latin News</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/instagram.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Instagram</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/url.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>URL</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/noticeboard.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Notice Board</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/twitter.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Twitter</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/toi.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>TOI News Feed</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/cnn.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>CNN</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/one-India.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>OneIndia Kannada</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/google-slide.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Google Slide</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/ndtv.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>NDTV</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/clock.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Digital Clock</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/huffpost.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Huffpost</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/nytimes.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>NY Times</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/news-au.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>News.com</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/wsj.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>The Wall Street</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/google-traffic.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Google Traffic</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/tv.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>DTH TV</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/slack.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>Slack</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+              <div class="ads__app-list_item col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+                <div class="ads__app-list_item_thumb"><img src="images/apps/dsmenu.svg"></div>
+                <div class="ads__app-list_item_title">
+                  <p>DS Menu</p>
+                  <button class="btn btn-default btn-sm"><i class="icon-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.6.1/dist/interact.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
+    <script src="./js/calendar.js"></script>
+    <script src="./js/datepicker.js"></script>
+    <script src="./js/sortable.js"></script>
+    <script src="./js/zone.js"></script>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>

@@ -1,0 +1,46 @@
+.modal.fade.ads__display-add.ads__quick-play-modal.show#quick-play-modal
+    .modal-dialog.modal-md
+        .modal-content
+            .modal-header
+                h3.modal-title Quick Play
+                a(href="#" data-dismiss="modal")
+                    i.icon-close
+            .modal-body.left
+                form.row(action="#" method="post")
+                    .col-6.form-group
+                        label(for="qpName") Name
+                        input.form-control#qpName(type="text" placeholder="Enter quick play name *")
+                    .col-6.form-group
+                        label(for="qpTime")
+                            span Time 
+                            small (in minutes)
+                        input.form-control#qpTime(type="number" value="10")
+                .display-list
+                    .ads__search-box
+                        input(type="text" placeholder="Search Display...")
+                        i.icon-search
+                    .display-list-table
+                        table.table
+                            thead
+                                tr
+                                    th
+                                        .checkbox
+                                            input.form-control#all(type="checkbox" checked)
+                                            label(for="all") &nbsp;
+                                    th Display Name
+                                    th last Sync
+                                    th Network Status
+                            tbody
+                                each val in [1,2,3,4,5]
+                                    tr
+                                        td 
+                                            .checkbox
+                                                input.form-control(type="checkbox" checked id="first" + val)
+                                                label(for="first" + val) &nbsp;
+                                        td Linux Ubuntu
+                                        td 23 Aug, 2019, 11:21 AM
+                                        td 
+                                            .network-status.off
+            .modal-footer
+                button.btn.btn-success.rounded(type="button" data-dismiss="modal") Submit
+                            

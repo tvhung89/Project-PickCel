@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 280 160">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-facebook);
+      }
+
+      .cls-2 {
+        fill: #475993;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-facebook">
+      <rect width="280" height="160"/>
+    </clipPath>
+  </defs>
+  <g id="facebook" class="cls-1">
+    <rect class="cls-3" width="280" height="160"/>
+    <g id="Apps" transform="translate(-147 -196.333)">
+      <g id="image" transform="translate(147 196.333)">
+        <path id="Path_394" data-name="Path 394" class="cls-2" d="M0,0H280V160H0Z"/>
+      </g>
+      <path id="facebook-2" data-name="facebook" class="cls-3" d="M70.273,0H10.946A10.944,10.944,0,0,0,0,10.944V70.271A10.944,10.944,0,0,0,10.946,81.215h29.26l.05-29.022h-7.54a1.779,1.779,0,0,1-1.779-1.772L30.9,41.066A1.779,1.779,0,0,1,32.68,39.28h7.526V30.241c0-10.49,6.407-16.2,15.764-16.2h7.679a1.779,1.779,0,0,1,1.779,1.779v7.888a1.779,1.779,0,0,1-1.778,1.779l-4.712,0c-5.089,0-6.074,2.418-6.074,5.967V39.28H64.046a1.779,1.779,0,0,1,1.767,1.989L64.7,50.624a1.779,1.779,0,0,1-1.767,1.57H52.913l-.05,29.022h17.41A10.944,10.944,0,0,0,81.217,70.272V10.944A10.944,10.944,0,0,0,70.273,0Z" transform="translate(245.998 235.333)"/>
+    </g>
+  </g>
+</svg>

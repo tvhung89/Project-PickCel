@@ -1,0 +1,179 @@
+$pre: 'datepicker';
+
+$date-font-size: 12px;
+
+.#{$pre} {
+    position: absolute;;
+    background-color: $white;
+    border-radius: 2;
+    box-shadow: 0 0 5px $lighter-gray-color;
+    padding: 0;
+    
+    @include media(mobileonly) {
+        position: fixed;
+        top: 0 !important;
+        left: 0 !important;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+    }
+
+    > div {
+        padding: 5px 15px 15px 15px;
+        .table-condensed {
+
+            @include media(mobileonly) {
+                width: 100%;
+            }
+
+            th, td {
+                height: 31px;
+                text-align: center;
+                padding: 8px;
+                border: 1px solid $gray-color;
+                font-size: $small-text-size;
+                line-height: $small-text-size;
+
+                @include media(mobileonly) {
+                    height: 50px;
+                }
+            }
+            thead {
+                //pointer-events: none;
+                tr {
+                    &:nth-child(2) {
+                        th {
+                            border-color: transparent;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        th {
+                            height: auto;
+                            background-color: $gray-color;
+                            padding: 2px 0;
+                            font-weight: 400;
+                            
+                        }
+                    }
+
+                    th {
+                        &.prev, &.next {
+                            cursor: pointer;
+                            color: transparent;
+                            position: relative;
+                            padding-bottom: 15px;
+
+                            &:after {
+                                font-family: 'icomoon' !important;
+                                position: absolute;
+                                top: 0;
+                                background-color: $darker-gray;
+                                color: $white;
+                                padding: 8px;
+                                border-radius: 2px;
+
+                                @include media(mobileonly) {
+                                    padding: 15px;
+                                }
+                            }
+
+                            &.prev {
+                                &:after {
+                                    content: "\e91c";
+                                    left: 0;
+                                }
+                            }
+
+                            &.next {
+                                &:after {
+                                    content: "\e91e";
+                                    left: auto;
+                                    right: 0;
+                                }
+                            }
+                        }
+
+                        &.disabled {
+                            @include opacity(0.3);
+                            pointer-events: none;
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        cursor: pointer;
+                        &.disabled {
+                            background-color: $lighter-gray-color;
+                            @include opacity(0.3);
+                            pointer-events: none;
+                        }
+
+                        &:hover {
+                            background-color: $light-gray-color;
+                        }
+
+                        &.active {
+                            background-color: $primary-color;
+                            color: $white;
+
+                            &:hover {
+                                background-color: $primary-color;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        &.#{$pre}-months, &.#{$pre}-years {
+            .table-condensed {
+                tbody {
+                    tr {
+                        td {
+                            max-width: 217px;
+                            .month, .year {
+                                width: 33%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 15px 0;
+                                float: left;
+    
+                                &.focused {
+                                    background-color: $primary-color;
+                                    color: $white;
+
+                                    &:hover {
+                                        background-color: $primary-color;
+                                    }
+                                }
+
+                                &.disabled {
+                                    background-color: $light-gray-color;
+                                    @include opacity(0.5);
+                                    pointer-events: none;
+                                }
+
+                                &:hover {
+                                    background-color: $light-gray-color;
+                                }
+                            }
+
+                            &:hover {
+                                background-color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

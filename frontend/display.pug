@@ -1,0 +1,52 @@
+extends layouts/_dashboard-layout.pug
+
+block content
+    include includes/_welcome-modal.pug
+    include includes/_guide-modal.pug
+    include includes/_add-display-modal.pug
+    //button.btn.btn-primary(type="button" data-toggle="modal" data-target="#welcome-modal") Show welcome modal
+    //button.btn.btn-primary(type="button" data-toggle="modal" data-target="#guide-modal") Show guide modal
+    //button.btn.btn-primary(type="button" data-toggle="modal" data-target="#display-modal") Show display modal
+    .ads__right-content
+        .ads__display
+            img(src="./images/screen.svg" alt="Screen")
+            p Connect your display to Signage device and install Signage player to add display
+            ul
+                li
+                    a(href="#") By Device
+                li
+                    a(href="#") Install Player
+            button.btn.btn-primary.rounded(type="button" data-target="#display-modal" data-toggle="modal")
+                i.icon-plus
+                span Add display
+            .players
+                p Pickcel signage players
+                ul
+                    li
+                        a(href="#")
+                            img(src="./images/android.png")
+                            span Android
+                    li
+                        a(href="#")
+                            img(src="./images/chrome.png")
+                            span Chrome
+                    li
+                        a(href="#")
+                            img(src="./images/windows.png")
+                            span Windows
+                    li
+                        a(href="#")
+                            img(src="./images/amazon.png")
+                            span Firestick
+                    li
+                        a(href="#")
+                            img(src="./images/macos.png")
+                            span MacOS
+                    li
+                        a(href="#")
+                            img(src="./images/linux.png")
+                            span Linux
+                    li
+                        a(href="#")
+                            img(src="./images/lg.png")
+                            span WebOS

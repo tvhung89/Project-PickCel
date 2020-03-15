@@ -1,0 +1,55 @@
+extends layouts/_layout.pug
+
+block content
+  .ads__home
+    .container-fluid
+      .row
+        .col-12.col-md-6.d-none.d-md-block
+          .ads__home-ads
+            h1 Cloud Digital Signage Solution
+            p Manage and publish contents on single or multiple displays with ease. You can upload your own creatives or get it from our Appstore.
+            .ads__home-carousel.carousel.slide#ads-carousel(data-ride="carousel" data-interval="2000")
+              ol.carousel-indicators
+                li.active(data-target="#ads-carousel" data-slide-to="0")
+                li(data-target="#ads-carousel" data-slide-to="1")
+                li(data-target="#ads-carousel" data-slide-to="2")
+              .carousel-inner
+                .carousel-item.active
+                  img.d-block.w-100(src="./images/home-slider/slider1.svg" alt="Slider 1")
+                .carousel-item
+                  img.d-block.w-100(src="./images/home-slider/slider2.svg" alt="Slider 2")
+                .carousel-item
+                  img.d-block.w-100(src="./images/home-slider/slider3.svg" alt="Slider 3")
+        .col-12.col-md-6
+          .ads__home-form
+            .ads__home-logo
+              img(src="./images/logo.png" alt="Logo")
+            .ads__home-form-auth
+              h2 Sign Up
+              .card.small-box
+                form(action="#" method="post")
+                  .form-group
+                    input.form-control(type="text" name="name" placeholder="Name *")
+                  .form-group
+                    input.form-control(type="text" name="email" placeholder="Email *")
+                  .form-group
+                    .input-group
+                      input.form-control(type="password" name="password" placeholder="Password *")
+                      .input-group-append
+                        span.input-group-text
+                          i.icon-eye-show
+                          i.icon-eye-hide.d-none
+                  .form-group
+                    .form-check
+                      input.form-check-input(type="checkbox" name="terms" id="terms" checked)
+                      label.form-check-label(for="terms") I Agree the terms and condition
+                  .form-group
+                    button.btn.btn-primary.d-block.w-100(type="submit") Sign up
+                    a.btn.btn-secondary.d-block.btn-social-login(href="#")
+                      img.d-inline-block(src="./images/icons/icon-google.svg" alt="Google")
+                      span Continue with Google
+                  .form-group
+                    p.text-center
+                      span I have an account
+                      a(href="index.html") Sign In
+                

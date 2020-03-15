@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloud Based Digital Signage Provider</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico"></head>
+  <body>
+<div class="modal fade ads__change-password ads__display-add show" id="change-password">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Change Password</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body left">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="oldPassword">Old password:</label>
+            <input class="form-control" id="oldPassword" type="text" placeholder="Please enter old password *">
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Old password:</label>
+            <input class="form-control" id="newPassword" type="text" placeholder="Please enter new password (minimum 6 characters) *">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm new password:</label>
+            <input class="form-control" id="confirmPassword" type="text" placeholder="Please repeat the new password *">
+          </div>
+          <button class="btn btn-success rounded" type="button" data-dismiss="modal">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ads__head">
+  <div class="ads__logo"><img src="./images/logo.png" alt="Logo"></div>
+  <div class="ads__user">
+    <div class="dropdown"><a class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">misovaiw@omegafive.net</a>
+      <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#change-password"><i class="icon-unlock"></i><span>Change password</span></a><a class="dropdown-item" href="#"><i class="icon-logout"></i><span>Logout</span></a></div>
+    </div>
+  </div>
+</div>
+    <div class="ads__body">
+      <div class="ads__left-bar">
+        <ul>
+          <li><a href="display_list.html"><i class="icon-monitor"></i><span>Display</span></a></li>
+          <li><a href="assets.html"><i class="icon-image"></i><span>Assets</span></a></li>
+          <li><a href="composition.html"><i class="icon-layout"></i><span>Composition</span></a></li>
+          <li><a href="template.html"><i class="icon-layout"></i><span>Template</span></a></li>
+          <li><a href="scheduler.html"><i class="icon-calendar"></i><span>Schedule</span></a></li>
+          <li><a href="app.html"><i class="icon-grid"></i><span>App</span></a></li>
+        </ul>
+      </div>
+<div class="modal fade ads__display-add show" id="add-zone-modal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Name</div>
+          </div>
+          <input class="form-control" type="text" required placeholder="Enter zone name">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary rounded" type="button" data-dismiss="modal">Cancel</button>
+        <button class="btn btn-success rounded" type="button" data-dismiss="modal">Add Zone</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="ads__right-content">
+<div class="ads__template">
+  <div class="ads__template-left">
+    <div class="ads__template-header">
+      <h2>Create Template</h2>
+      <div class="row">
+        <div class="col-12 col-sm-3">
+          <div class="form-group">
+            <label for="templateName">Template Name</label>
+            <input class="form-control" type="text" placeholder="Enter template name">
+          </div>
+        </div>
+        <div class="col-12 col-sm-3">
+          <div class="form-group">
+            <label for="templateResolution">Resolution</label>
+            <select class="form-control">
+              <option value="1920*1080">1920*1080</option>
+              <option value="1080*1920">1080*1920</option>
+              <option value="custom">custom</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="checkbox">
+        <input id="templateGrid" type="checkbox">
+        <label for="templateGrid">Show Grid?</label>
+      </div>
+    </div>
+    <div class="ads__template-body">
+      <div class="ads__template-info">
+        <button class="btn btn-primary rounded" type="button" data-target="#add-zone-modal" data-toggle="modal"><i class="icon-plus"></i><span>Add Zone</span></button>
+      </div>
+      <div class="ads__template-handler" data-width="1920" data-height="1080">
+        <div class="handler-drag" data-width="16" data-height="9" data-minwidth="160" data-minheight="90"><span>Zone 1</span></div>
+        <div class="handler-drag" data-width="16" data-height="9" data-minwidth="160" data-minheight="90"><span>Zone 2</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="ads__template-right">
+    <div class="ads__template-details">
+      <h3>Zone Details</h3>
+      <div class="row">
+        <div class="col-6">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Top</div>
+            </div>
+            <input class="form-control" type="number" name="Top">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Left</div>
+            </div>
+            <input class="form-control" type="number" name="Left">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Width</div>
+            </div>
+            <input class="form-control" type="number" name="Width">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Height</div>
+            </div>
+            <input class="form-control" type="number" name="Height">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ads__template-layers">
+      <h3>Layers (Drag to sort)</h3>
+      <ul class="ads__template-container" id="layers">
+        <li class="ads__template-layer selected">
+          <p>Zone1</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone2</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone3</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone4</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone5</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone6</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone7</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone8</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone9</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone10</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone11</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone12</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone13</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone14</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone15</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+        <li class="ads__template-layer">
+          <p>Zone16</p><a href="#"><i class="icon-trash"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="ads__template-btns">
+      <button class="btn btn-primary rounded" type="button">Cancel</button>
+      <button class="btn btn-info rounded" type="button">Create Template</button>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.6.1/dist/interact.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
+    <script src="./js/calendar.js"></script>
+    <script src="./js/datepicker.js"></script>
+    <script src="./js/sortable.js"></script>
+    <script src="./js/zone.js"></script>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>

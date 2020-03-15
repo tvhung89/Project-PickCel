@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372.496 307.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(127,123,135,0.06);
+        stroke: #7f7b87;
+        stroke-width: 1.5px;
+      }
+
+      .cls-1, .cls-2, .cls-7, .cls-8 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-10, .cls-2, .cls-7, .cls-8 {
+        fill: none;
+      }
+
+      .cls-2, .cls-7, .cls-8 {
+        stroke: #979797;
+      }
+
+      .cls-2 {
+        stroke-dasharray: 1 1 1 22;
+      }
+
+      .cls-3 {
+        fill: #7f7b87;
+      }
+
+      .cls-4 {
+        fill: #fa5151;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #d8d8d8;
+      }
+
+      .cls-7, .cls-8 {
+        stroke-width: 0.5px;
+      }
+
+      .cls-8 {
+        stroke-linecap: square;
+      }
+
+      .cls-9 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_2" data-name="Group 2" transform="translate(-533.497 -140)">
+    <g id="Rectangle_24" data-name="Rectangle 24" class="cls-1" transform="translate(587 284)">
+      <rect class="cls-9" width="279" height="162" rx="2"/>
+      <rect class="cls-10" x="-0.75" y="-0.75" width="280.5" height="163.5" rx="2.75"/>
+    </g>
+    <path id="Path_2" data-name="Path 2" class="cls-2" d="M48.132,105.641c-33.484-2.315-65.5-41.023-37.307-71.809C24.066,19.374,45,24.385,61.958,22.391,71.889,21.223,81.024,9.081,81.024,0" transform="translate(534 222.733)"/>
+    <path id="Path_3" data-name="Path 3" class="cls-2" d="M0,38C15.353,21.2,23.265,15.019,47.455,10.239c18.883-3.731,17.4,4,25.187-10.239" transform="translate(627.762 157.545)"/>
+    <path id="Path_4" data-name="Path 4" class="cls-2" d="M0,0C31.039,6.079,64.786,17.241,82.714,45.7" transform="translate(735.146 144)"/>
+    <path id="Path_5" data-name="Path 5" class="cls-2" d="M0,0C56.625,25.1,78.832,63.592,57.039,124.374c-3.661,10.209-22.1,41.6-32.765,41.6" transform="translate(840.237 223.909)"/>
+    <circle id="Oval_8" data-name="Oval 8" class="cls-3" cx="2.5" cy="2.5" r="2.5" transform="translate(557 285)"/>
+    <circle id="Oval_8_Copy" data-name="Oval 8 Copy" class="cls-3" cx="2.5" cy="2.5" r="2.5" transform="translate(680.653 196.184)"/>
+    <circle id="Oval_8_Copy_4" data-name="Oval 8 Copy 4" class="cls-3" cx="2.5" cy="2.5" r="2.5" transform="translate(754.653 176.184)"/>
+    <circle id="Oval_8_Copy_2" data-name="Oval 8 Copy 2" class="cls-3" cx="2.5" cy="2.5" r="2.5" transform="translate(778.653 233.184)"/>
+    <circle id="Oval_8_Copy_3" data-name="Oval 8 Copy 3" class="cls-3" cx="2.5" cy="2.5" r="2.5" transform="translate(879.653 325.184)"/>
+    <path id="Triangle_2" data-name="Triangle 2" class="cls-4" d="M5,2.5,0,5V0Z" transform="translate(744.653 228.184)"/>
+    <path id="Triangle_2_Copy_3" data-name="Triangle 2 Copy 3" class="cls-4" d="M5,2.5,0,5V0Z" transform="translate(884.653 290.184)"/>
+    <path id="Triangle_2_Copy_2" data-name="Triangle 2 Copy 2" class="cls-4" d="M5,2.5,0,5V0Z" transform="translate(658.653 238.184)"/>
+    <path id="Triangle_2_Copy" data-name="Triangle 2 Copy" class="cls-4" d="M5,2.5,0,5V0Z" transform="translate(569.653 304.184)"/>
+    <g id="clock" transform="translate(804 187)">
+      <path id="Shape" class="cls-3" d="M16.5,33A16.5,16.5,0,1,1,33,16.5,16.519,16.519,0,0,1,16.5,33Zm0-31.9A15.4,15.4,0,1,0,31.9,16.5,15.417,15.417,0,0,0,16.5,1.1Z"/>
+      <path id="Shape-2" data-name="Shape" class="cls-4" d="M6,11a2.077,2.077,0,0,1-1.93-1.737H.5a.585.585,0,0,1,0-1.157h3.57A2.184,2.184,0,0,1,5.5,6.45V.579A.544.544,0,0,1,6,0a.544.544,0,0,1,.5.579V6.45A2.28,2.28,0,0,1,8,8.684,2.178,2.178,0,0,1,6,11ZM6,7.527A1.089,1.089,0,0,0,5,8.684,1.089,1.089,0,0,0,6,9.842,1.089,1.089,0,0,0,7,8.684,1.089,1.089,0,0,0,6,7.527Z" transform="translate(10 8)"/>
+      <path id="Shape-3" data-name="Shape" class="cls-3" d="M1,2c.552,0,1-.3,1-.667V.667C2,.3,1.552,0,1,0S0,.3,0,.667v.667C0,1.7.448,2,1,2Z" transform="translate(16 3)"/>
+      <path id="Shape-4" data-name="Shape" class="cls-3" d="M1,0C.448,0,0,.3,0,.667v.667C0,1.7.448,2,1,2s1-.3,1-.667V.667C2,.3,1.552,0,1,0Z" transform="translate(16 27)"/>
+      <path id="Shape-5" data-name="Shape" class="cls-3" d="M1.333,0H.667C.3,0,0,.447,0,1S.3,2,.667,2h.667C1.7,2,2,1.553,2,1S1.7,0,1.333,0Z" transform="translate(27 16)"/>
+      <path id="Shape-6" data-name="Shape" class="cls-3" d="M1.333,0H.667C.3,0,0,.447,0,1S.3,2,.667,2h.667C1.7,2,2,1.553,2,1S1.7,0,1.333,0Z" transform="translate(3 16)"/>
+      <path id="Shape-7" data-name="Shape" class="cls-3" d="M.739.216.217.739A.739.739,0,1,0,1.261,1.784l.522-.522A.739.739,0,1,0,.739.216Z" transform="translate(25 7)"/>
+      <path id="Shape-8" data-name="Shape" class="cls-3" d="M.739.216.217.739A.739.739,0,1,0,1.261,1.784l.522-.522A.739.739,0,1,0,.739.216Z" transform="translate(7 25)"/>
+      <path id="Shape-9" data-name="Shape" class="cls-3" d="M1.261.217A.739.739,0,0,0,.217,1.261l.522.522A.739.739,0,1,0,1.783.739Z" transform="translate(25 25)"/>
+      <path id="Shape-10" data-name="Shape" class="cls-3" d="M1.261.217A.739.739,0,0,0,.217,1.261l.522.522A.739.739,0,1,0,1.783.739Z" transform="translate(7 7)"/>
+    </g>
+    <g id="calendar_1_" data-name="calendar (1)" transform="translate(704 140)">
+      <path id="Shape-11" data-name="Shape" class="cls-3" d="M24.554,27H.446A.449.449,0,0,1,0,26.55V2.25A.449.449,0,0,1,.446,1.8H3.571V.45A.449.449,0,0,1,4.018,0H7.143A.449.449,0,0,1,7.59.45V1.8H17.41V.45A.449.449,0,0,1,17.857,0h3.125a.449.449,0,0,1,.447.45V1.8h3.125A.449.449,0,0,1,25,2.25v24.3A.449.449,0,0,1,24.554,27ZM.893,7.65V26.1H24.107V7.65Zm0-4.95V6.75H24.107V2.7H21.429V4.05a.449.449,0,0,1-.447.45H17.857a.449.449,0,0,1-.446-.45V2.7H7.59V4.05a.449.449,0,0,1-.446.45H4.018a.449.449,0,0,1-.446-.45V2.7ZM18.3.9V3.6h2.232V.9ZM4.464.9V3.6H6.7V.9Z"/>
+      <path id="Shape-12" data-name="Shape" class="cls-4" d="M17,13H0V0H17V13ZM12.974,8.966V12.1h3.132V8.966Zm-4.026,0V12.1h3.131V8.966Zm-4.027,0V12.1H8.052V8.966Zm-4.027,0V12.1H4.027V8.966ZM12.974,4.931V8.069h3.132V4.931Zm-4.026,0V8.069h3.131V4.931Zm-4.027,0V8.069H8.052V4.931Zm-4.027,0V8.069H4.027V4.931ZM12.974.9V4.035h3.132V.9ZM8.948.9V4.035h3.131V.9ZM4.921.9V4.035H8.052V.9ZM.895.9V4.035H4.027V.9Z" transform="translate(4 10)"/>
+    </g>
+    <g id="hourglass" transform="matrix(0.966, -0.259, 0.259, 0.966, 603.285, 199.78)">
+      <path id="Shape-13" data-name="Shape" class="cls-3" d="M23.369,32H1.631a1.6,1.6,0,1,1,0-3.2H4.348V25.6A10.878,10.878,0,0,1,10.171,16,10.882,10.882,0,0,1,4.348,6.4V3.2H1.631A1.618,1.618,0,0,1,0,1.6,1.618,1.618,0,0,1,1.631,0H23.369A1.618,1.618,0,0,1,25,1.6a1.618,1.618,0,0,1-1.631,1.6H20.652V6.4A10.881,10.881,0,0,1,14.829,16a10.879,10.879,0,0,1,5.823,9.6v3.2h2.717a1.6,1.6,0,1,1,0,3.2ZM1.631,29.867a.533.533,0,1,0,0,1.066H23.369a.533.533,0,1,0,0-1.066H1.631Zm17.391-1.6a.539.539,0,0,1,.544.534V25.6a9.851,9.851,0,0,0-6.088-9.067H11.524A9.852,9.852,0,0,0,5.435,25.6v3.2a.543.543,0,0,1,1.086,0H7.609a.544.544,0,0,1,1.087,0H9.783a.543.543,0,0,1,1.086,0h1.087a.544.544,0,0,1,1.087,0H14.13a.544.544,0,0,1,1.087,0H16.3a.544.544,0,0,1,1.087,0h1.086A.54.54,0,0,1,19.021,28.266ZM5.435,3.2V6.4a9.849,9.849,0,0,0,6.088,9.067h1.954A9.85,9.85,0,0,0,19.565,6.4V3.2Zm-3.8-2.134a.533.533,0,1,0,0,1.067H23.369a.533.533,0,1,0,0-1.067Z"/>
+      <circle id="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(7 27)"/>
+      <circle id="Oval-2" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(9 27)"/>
+      <circle id="Oval-3" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(11 27)"/>
+      <circle id="Oval-4" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(13 27)"/>
+      <circle id="Oval-5" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(15 27)"/>
+      <circle id="Oval-6" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(17 27)"/>
+      <circle id="Oval-7" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(8 26)"/>
+      <circle id="Oval-8" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(10 26)"/>
+      <circle id="Oval-9" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(12 17)"/>
+      <circle id="Oval-10" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(9 11)"/>
+      <circle id="Oval-11" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(11 11)"/>
+      <circle id="Oval-12" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(13 11)"/>
+      <circle id="Oval-13" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(15 11)"/>
+      <circle id="Oval-14" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(14 10)"/>
+      <circle id="Oval-15" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(15 9)"/>
+      <circle id="Oval-16" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(10 10)"/>
+      <circle id="Oval-17" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(12 10)"/>
+      <circle id="Oval-18" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(9 9)"/>
+      <circle id="Oval-19" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(10 12)"/>
+      <circle id="Oval-20" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(11 13)"/>
+      <circle id="Oval-21" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(13 13)"/>
+      <circle id="Oval-22" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(12 12)"/>
+      <circle id="Oval-23" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(14 12)"/>
+      <circle id="Oval-24" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(12 19)"/>
+      <circle id="Oval-25" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(12 20)"/>
+      <circle id="Oval-26" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(12 22)"/>
+      <circle id="Oval-27" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(12 23)"/>
+      <circle id="Oval-28" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(12 25)"/>
+      <circle id="Oval-29" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(14 26)"/>
+      <circle id="Oval-30" data-name="Oval" class="cls-4" cx="0.5" cy="0.5" r="0.5" transform="translate(16 26)"/>
+    </g>
+    <rect id="Rectangle_32" data-name="Rectangle 32" class="cls-5" width="262" height="131" rx="2" transform="translate(596 307)"/>
+    <rect id="Rectangle_3_Copy_3" data-name="Rectangle 3 Copy 3" class="cls-6" width="15" height="3" rx="1.5" transform="translate(622 321)"/>
+    <rect id="Rectangle_3_Copy_4" data-name="Rectangle 3 Copy 4" class="cls-6" width="15" height="3" rx="1.5" transform="translate(651 321)"/>
+    <rect id="Rectangle_3_Copy_5" data-name="Rectangle 3 Copy 5" class="cls-6" width="15" height="3" rx="1.5" transform="translate(683 321)"/>
+    <rect id="Rectangle_3_Copy_6" data-name="Rectangle 3 Copy 6" class="cls-6" width="15" height="3" rx="1.5" transform="translate(719 321)"/>
+    <rect id="Rectangle_3_Copy_10" data-name="Rectangle 3 Copy 10" class="cls-6" width="60" height="5" rx="2.5" transform="translate(695 311)"/>
+    <rect id="Rectangle_3_Copy_7" data-name="Rectangle 3 Copy 7" class="cls-6" width="15" height="3" rx="1.5" transform="translate(752 321)"/>
+    <rect id="Rectangle_3_Copy_8" data-name="Rectangle 3 Copy 8" class="cls-6" width="15" height="3" rx="1.5" transform="translate(786 321)"/>
+    <rect id="Rectangle_3_Copy_9" data-name="Rectangle 3 Copy 9" class="cls-6" width="15" height="3" rx="1.5" transform="translate(818 321)"/>
+    <g id="Rectangle_35" data-name="Rectangle 35" class="cls-7" transform="translate(616 327)">
+      <rect class="cls-9" width="225" height="99" rx="2"/>
+      <rect class="cls-10" x="0.25" y="0.25" width="224.5" height="98.5" rx="1.75"/>
+    </g>
+    <path id="Line" class="cls-8" d="M.25,98.5V.5" transform="translate(643 327)"/>
+    <path id="Line_Copy" data-name="Line Copy" class="cls-8" d="M.25,98.5V.5" transform="translate(674 327)"/>
+    <path id="Line_Copy_4" data-name="Line Copy 4" class="cls-8" d="M.25,98.5V.5" transform="translate(708 327)"/>
+    <path id="Line_Copy_2" data-name="Line Copy 2" class="cls-8" d="M.25,98.5V.5" transform="translate(742 327)"/>
+    <path id="Line_Copy_3" data-name="Line Copy 3" class="cls-8" d="M.25,98.5V.5" transform="translate(775 327)"/>
+    <path id="Line_Copy_5" data-name="Line Copy 5" class="cls-8" d="M.25,98.5V.5" transform="translate(809 327)"/>
+    <path id="Line_2" data-name="Line 2" class="cls-8" d="M.5.25H224.643" transform="translate(616 350)"/>
+    <path id="Line_2_Copy_2" data-name="Line 2 Copy 2" class="cls-8" d="M.5.25H224.643" transform="translate(616 401)"/>
+    <path id="Line_2_Copy" data-name="Line 2 Copy" class="cls-8" d="M.5.25H224.643" transform="translate(616 376)"/>
+    <circle id="Oval_8_Copy_17" data-name="Oval 8 Copy 17" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(712 330)"/>
+    <circle id="Oval_8_Copy_21" data-name="Oval 8 Copy 21" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(747 330)"/>
+    <circle id="Oval_8_Copy_25" data-name="Oval 8 Copy 25" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(784 330)"/>
+    <circle id="Oval_8_Copy_28" data-name="Oval 8 Copy 28" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(815 330)"/>
+    <circle id="Oval_8_Copy_6" data-name="Oval 8 Copy 6" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(620 353)"/>
+    <circle id="Oval_8_Copy_10" data-name="Oval 8 Copy 10" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(646 353)"/>
+    <circle id="Oval_8_Copy_14" data-name="Oval 8 Copy 14" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(678 353)"/>
+    <circle id="Oval_8_Copy_18" data-name="Oval 8 Copy 18" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(712 353)"/>
+    <circle id="Oval_8_Copy_22" data-name="Oval 8 Copy 22" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(747 353)"/>
+    <circle id="Oval_8_Copy_26" data-name="Oval 8 Copy 26" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(784 353)"/>
+    <circle id="Oval_8_Copy_29" data-name="Oval 8 Copy 29" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(815 353)"/>
+    <circle id="Oval_8_Copy_7" data-name="Oval 8 Copy 7" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(620 379)"/>
+    <circle id="Oval_8_Copy_11" data-name="Oval 8 Copy 11" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(646 379)"/>
+    <circle id="Oval_8_Copy_15" data-name="Oval 8 Copy 15" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(678 379)"/>
+    <circle id="Oval_8_Copy_19" data-name="Oval 8 Copy 19" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(712 379)"/>
+    <circle id="Oval_8_Copy_23" data-name="Oval 8 Copy 23" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(747 379)"/>
+    <circle id="Oval_8_Copy_27" data-name="Oval 8 Copy 27" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(784 379)"/>
+    <circle id="Oval_8_Copy_30" data-name="Oval 8 Copy 30" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(815 379)"/>
+    <circle id="Oval_8_Copy_8" data-name="Oval 8 Copy 8" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(620 404)"/>
+    <circle id="Oval_8_Copy_12" data-name="Oval 8 Copy 12" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(646 404)"/>
+    <circle id="Oval_8_Copy_16" data-name="Oval 8 Copy 16" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(678 404)"/>
+    <circle id="Oval_8_Copy_20" data-name="Oval 8 Copy 20" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(712 404)"/>
+    <circle id="Oval_8_Copy_24" data-name="Oval 8 Copy 24" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(747 404)"/>
+    <rect id="Rectangle_36" data-name="Rectangle 36" class="cls-4" width="33" height="26" transform="translate(709 350)"/>
+    <circle id="Oval_8_Copy_31" data-name="Oval 8 Copy 31" class="cls-6" cx="2.5" cy="2.5" r="2.5" transform="translate(712 353)"/>
+  </g>
+</svg>

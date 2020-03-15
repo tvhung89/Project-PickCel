@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloud Based Digital Signage Provider</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900&amp;display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico"></head>
+  <body>
+<div class="modal fade ads__change-password ads__display-add show" id="change-password">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Change Password</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body left">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="oldPassword">Old password:</label>
+            <input class="form-control" id="oldPassword" type="text" placeholder="Please enter old password *">
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Old password:</label>
+            <input class="form-control" id="newPassword" type="text" placeholder="Please enter new password (minimum 6 characters) *">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm new password:</label>
+            <input class="form-control" id="confirmPassword" type="text" placeholder="Please repeat the new password *">
+          </div>
+          <button class="btn btn-success rounded" type="button" data-dismiss="modal">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ads__head">
+  <div class="ads__logo"><img src="./images/logo.png" alt="Logo"></div>
+  <div class="ads__user">
+    <div class="dropdown"><a class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">misovaiw@omegafive.net</a>
+      <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#change-password"><i class="icon-unlock"></i><span>Change password</span></a><a class="dropdown-item" href="#"><i class="icon-logout"></i><span>Logout</span></a></div>
+    </div>
+  </div>
+</div>
+    <div class="ads__body">
+      <div class="ads__left-bar">
+        <ul>
+          <li><a href="display_list.html"><i class="icon-monitor"></i><span>Display</span></a></li>
+          <li><a href="assets.html"><i class="icon-image"></i><span>Assets</span></a></li>
+          <li><a href="composition.html"><i class="icon-layout"></i><span>Composition</span></a></li>
+          <li><a href="template.html"><i class="icon-layout"></i><span>Template</span></a></li>
+          <li><a href="scheduler.html"><i class="icon-calendar"></i><span>Schedule</span></a></li>
+          <li><a href="app.html"><i class="icon-grid"></i><span>App</span></a></li>
+        </ul>
+      </div>
+<div class="modal fade ads__display-add show" id="display-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Add Display</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body"><img src="./images/add-display.png" alt="Add Display">
+        <p>Enter registration code as shown on the display</p>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Code</div>
+          </div>
+          <input class="form-control" type="text" maxlength="6" required placeholder="Enter registration code">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary rounded" type="button" data-dismiss="modal">Cancel</button>
+        <button class="btn btn-success rounded" type="button" data-dismiss="modal">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade ads__display-add ads__add-schedule show" id="add-schedule-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Select Composition</h3><a href="#" data-dismiss="modal"><i class="icon-close"></i></a>
+      </div>
+      <div class="modal-body left">
+        <div class="ads__add-schedule-grid">
+          <div class="ads__add-schedule-left">
+            <div class="ads__add-schedule-top">
+              <div class="ads__search-box">
+                <input type="text" placeholder="Search..."><i class="icon-search"></i>
+              </div>
+            </div>
+            <div class="ads__add-schedule-list">
+              <div class="ads__add-schedule-item">
+                <input type="radio" name="compositon" id="youtube">
+                <label for="youtube">
+                  <div class="thumb"><img src="./images/youtube.svg"></div>
+                  <div class="content">
+                    <h3>youtube name</h3>
+                    <p>horizontal</p>
+                  </div>
+                  <div class="info">
+                    <p>21 Aug, 2019 06:03 PM</p>
+                    <p>1920*1080</p>
+                  </div>
+                  <div class="checkbox">
+                    <div class="selected"><i class="icon-check"></i></div>
+                  </div>
+                </label>
+              </div>
+              <div class="ads__add-schedule-item">
+                <input type="radio" name="compositon" id="weather">
+                <label for="weather">
+                  <div class="thumb"><img src="./images/weather.svg"></div>
+                  <div class="content">
+                    <h3>weather name</h3>
+                    <p>horizontal</p>
+                  </div>
+                  <div class="info">
+                    <p>21 Aug, 2019 06:03 PM</p>
+                    <p>1920*1080</p>
+                  </div>
+                  <div class="checkbox">
+                    <div class="selected"><i class="icon-check"></i></div>
+                  </div>
+                </label>
+              </div>
+              <div class="ads__add-schedule-item">
+                <input type="radio" name="compositon" id="clock">
+                <label for="clock">
+                  <div class="thumb"><img src="./images/clock.svg"></div>
+                  <div class="content">
+                    <h3>clock name</h3>
+                    <p>horizontal</p>
+                  </div>
+                  <div class="info">
+                    <p>21 Aug, 2019 06:03 PM</p>
+                    <p>1920*1080</p>
+                  </div>
+                  <div class="checkbox">
+                    <div class="selected"><i class="icon-check"></i></div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="foot">
+              <p>3 compositions</p>
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#"><i class="icon-angle-double-left"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="icon-angle-left"></i></a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#"><i class="icon-angle-double-right"></i></a></li>
+                <li class="page-item disabled"><a class="page-link" href="#"><i class="icon-angle-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="ads__add-schedule-right">
+            <h2>Schedule Time</h2>
+            <div class="ads__add-schedule-time">
+              <div class="form-group row">
+                <div class="time-input col-6">
+                  <label for="start">Start</label>
+                  <input class="form-control" id="start" type="time" value="10:30">
+                </div>
+                <div class="time-input col-6">
+                  <label for="end">End</label>
+                  <input class="form-control" id="end" type="time" value="15:45">
+                </div>
+              </div>
+              <div class="ads__add-schedule-repeater">
+                <div class="checkbox">
+                  <input class="form-control" id="repeat" type="checkbox">
+                  <label for="repeat">Repeat?</label>
+                </div>
+                <div class="ads__add-schedule-frame">
+                  <div class="form-group row">
+                    <div class="date-input col-6">
+                      <input class="form-control date-picker" type="text" name="startDate" readonly><i class="icon-calendar"></i>
+                    </div>
+                    <div class="date-input col-6">
+                      <input class="form-control date-picker" type="text" name="endDate" readonly><i class="icon-calendar"></i>
+                    </div>
+                  </div>
+                  <div class="checkbox">
+                    <input class="form-control" id="alldays" type="checkbox">
+                    <label for="alldays">Repeat for all days?</label>
+                  </div>
+                  <div class="days">
+                    <input type="checkbox" name="repeat[]" id="Su" value="Su">
+                    <label for="Su">Su</label>
+                    <input type="checkbox" name="repeat[]" id="Mo" value="Mo">
+                    <label for="Mo">Mo</label>
+                    <input type="checkbox" name="repeat[]" id="Tu" value="Tu">
+                    <label for="Tu">Tu</label>
+                    <input type="checkbox" name="repeat[]" id="We" value="We">
+                    <label for="We">We</label>
+                    <input type="checkbox" name="repeat[]" id="Th" value="Th">
+                    <label for="Th">Th</label>
+                    <input type="checkbox" name="repeat[]" id="Fr" value="Fr">
+                    <label for="Fr">Fr</label>
+                    <input type="checkbox" name="repeat[]" id="Sa" value="Sa">
+                    <label for="Sa">Sa</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="ads__add-schedule-btns">
+          <button class="btn btn-primary rounded" type="button" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-success rounded" type="button" data-dismiss="modal">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="ads__right-content">
+        <div class="ads__scheduler_list">
+          <div class="ads__scheduler_list-calendar-wrapper">
+            <div class="ads__scheduler_list-calendar" id="calendar"></div>
+          </div>
+          <div class="ads__scheduler_list-detail">
+            <div class="form-group">
+              <label for="scheduleName">Schedule Name</label>
+              <input class="form-control" type="text" placeholder="Enter the schedule name">
+            </div>
+            <div class="ads__scheduler_list-items">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Linux Ubuntu</td>
+                    <td>
+                      <div class="network-status off"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ads__scheduler_list-btns"><a class="d-none" id="add-schedule-link" href="#add-schedule-modal" data-toggle="modal">Add Schedule Component</a>
+              <button class="btn btn-primary rounded" type="button">Update</button>
+              <button class="btn btn-info rounded" type="button">Save &amp; Assign Displays</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.6.1/dist/interact.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
+    <script src="./js/calendar.js"></script>
+    <script src="./js/datepicker.js"></script>
+    <script src="./js/sortable.js"></script>
+    <script src="./js/zone.js"></script>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>

@@ -1,0 +1,176 @@
+extends layouts/_dashboard-layout.pug
+
+block content
+    include includes/_upload-modal.pug
+    include includes/_save-composition-modal.pug
+    include includes/_template-modal.pug
+    .ads__right-content.ads__comp
+        .ads__comp-left
+            .ads__comp-left_template
+                .ads__comp-left_template-thumb
+                .ads__comp-left_template-info
+                    h3
+                        span C - 23 Aug-19 12:35
+                        input.d-none(type="text" value="C - 23 Aug-19 12:35")
+                        a(href="#")
+                            i.icon-pencil
+                    p
+                        span Fullscreen - Horizontal
+                        a(href="#template-modal" data-toggle="modal")
+                            i.icon-pencil
+                .ads__comp-left_template-actions
+                    button.btn.btn-info.rounded(type="button") Preview
+                    button.btn.btn-primary.rounded(type="button" data-toggle="modal" data-target="#save-composition-modal") Save
+            .ads__comp-left_list
+                ul.nav.nav-tabs.nav-list
+                    li.nav-item
+                        a.nav-link.active(data-toggle="tab" href="#zone1") Zone 1
+                    .right-icons
+                        p 14 Seconds
+                .tab-content
+                    .tab-pane.fade.active.show#zone1
+                        - var n = 0;
+                        while n < 10
+                            - n++
+                            .ads__comp-left_list-item
+                                .first
+                                    p 1
+                                .second
+                                    img(src="./images/youtube.svg")
+                                .third
+                                    p Youtube video
+                                    p 100.43 KB
+                                .fourth
+                                    input(type="text" value="10")
+                                    span Seconds
+                                .fifth
+                                    a(href="#")
+                                        i.icon-trash      
+        .ads__comp-right
+            .ads__comp-right_assets
+                ul.nav.nav-tabs.nav-list
+                    li.nav-item
+                        a.nav-link.active(data-toggle="tab" href="#image") Image
+                    li.nav-item
+                        a.nav-link(data-toggle="tab" href="#video") Video
+                    li.nav-item
+                        a.nav-link(data-toggle="tab" href="#apps") Apps
+                    .right-icons
+                        .ads__search-box
+                            input(type="text" placeholder="Search...")
+                            i.icon-search
+                        button.btn.btn-primary.rounded(type="button" data-toggle="modal" data-target="#upload-modal")
+                            i.icon-download
+                            span Upload a file
+                .tab-content
+                    .tab-pane.fade.active.show#image
+                        .table-content
+                            .ads__comp-right_items
+                                - var n = 0;
+                                while n < 10
+                                    - n++
+                                    .ads__comp-right_item
+                                        .first
+                                            img(src="./images/weather.svg")
+                                        .second
+                                            p Youtube video
+                                            p 1280*720
+                                        .third
+                                            p 22 Aug, 2019, 2:36 PM
+                                            p 100.43 KB
+                                
+                            .foot
+                                p 2 assets
+                                ul.pagination
+                                    li.page-item
+                                        a.page-link(href="#")
+                                            i.icon-angle-double-left
+                                    li.page-item
+                                        a.page-link(href="#")
+                                            i.icon-angle-left
+                                    li.page-item.active
+                                        a.page-link(href="#") 1
+                                    li.page-item
+                                        a.page-link(href="#") 2
+                                    li.page-item
+                                        a.page-link(href="#") 3
+                                    li.page-item.disabled
+                                        a.page-link(href="#")
+                                            i.icon-angle-double-right
+                                    li.page-item.disabled
+                                        a.page-link(href="#")
+                                            i.icon-angle-right
+                    .tab-pane.fade#video
+                        .table-content
+                            .ads__comp-right_items
+                                - var n = 0;
+                                while n < 10
+                                    - n++
+                                    .ads__comp-right_item
+                                        .first
+                                            img(src="./images/youtube.svg")
+                                        .second
+                                            p Youtube video
+                                            p 1280*720
+                                        .third
+                                            p 22 Aug, 2019, 2:36 PM
+                                            p 100.43 KB
+                                
+                            .foot
+                                p 2 assets
+                                ul.pagination
+                                    li.page-item
+                                        a.page-link(href="#")
+                                            i.icon-angle-double-left
+                                    li.page-item
+                                        a.page-link(href="#")
+                                            i.icon-angle-left
+                                    li.page-item.active
+                                        a.page-link(href="#") 1
+                                    li.page-item
+                                        a.page-link(href="#") 2
+                                    li.page-item
+                                        a.page-link(href="#") 3
+                                    li.page-item.disabled
+                                        a.page-link(href="#")
+                                            i.icon-angle-double-right
+                                    li.page-item.disabled
+                                        a.page-link(href="#")
+                                            i.icon-angle-right
+                    .tab-pane.fade#apps
+                        .table-content
+                            .ads__comp-right_items
+                                - var n = 0;
+                                while n < 10
+                                    - n++
+                                    .ads__comp-right_item
+                                        .first
+                                            img(src="./images/clock.svg")
+                                        .second
+                                            p Youtube video
+                                            p 1280*720
+                                        .third
+                                            p 22 Aug, 2019, 2:36 PM
+                                            p 100.43 KB
+                                
+                            .foot
+                                p 2 assets
+                                ul.pagination
+                                    li.page-item
+                                        a.page-link(href="#")
+                                            i.icon-angle-double-left
+                                    li.page-item
+                                        a.page-link(href="#")
+                                            i.icon-angle-left
+                                    li.page-item.active
+                                        a.page-link(href="#") 1
+                                    li.page-item
+                                        a.page-link(href="#") 2
+                                    li.page-item
+                                        a.page-link(href="#") 3
+                                    li.page-item.disabled
+                                        a.page-link(href="#")
+                                            i.icon-angle-double-right
+                                    li.page-item.disabled
+                                        a.page-link(href="#")
+                                            i.icon-angle-right

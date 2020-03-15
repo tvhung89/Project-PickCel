@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 280 160">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-weather);
+      }
+
+      .cls-2 {
+        fill: #2196f3;
+      }
+
+      .cls-3 {
+        fill: #ffce00;
+      }
+
+      .cls-4 {
+        fill: #1e3143;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        font-size: 14px;
+        font-family: ArialMT, Arial;
+      }
+    </style>
+    <clipPath id="clip-weather">
+      <rect width="280" height="160"/>
+    </clipPath>
+  </defs>
+  <g id="weather" class="cls-1">
+    <rect class="cls-6" width="280" height="160"/>
+    <g id="image">
+      <path id="Path_394" data-name="Path 394" class="cls-2" d="M0,0H280V160H0Z"/>
+    </g>
+    <g id="Group_476" data-name="Group 476" transform="translate(1 4.161)">
+      <g id="sun" transform="translate(108 34.839)">
+        <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-3" cx="23.823" cy="23.823" r="23.823" transform="translate(0 1.93)"/>
+        <path id="Union_1" data-name="Union 1" class="cls-4" d="M24.909,51.022V45.955a1.24,1.24,0,0,1,2.48,0v5.067a1.233,1.233,0,0,1-1.24,1.24A1.256,1.256,0,0,1,24.909,51.022Zm17.964-6.378-3.579-3.579a1.228,1.228,0,1,1,1.736-1.736l3.579,3.579a1.2,1.2,0,0,1,0,1.736,1.385,1.385,0,0,1-.85.354A1.23,1.23,0,0,1,42.872,44.644Zm-35.219,0a1.24,1.24,0,0,1,0-1.772l3.579-3.579A1.253,1.253,0,1,1,13,41.066L9.425,44.644A1.4,1.4,0,0,1,8.539,45,1.23,1.23,0,0,1,7.653,44.644Zm2.976-18.5A15.519,15.519,0,1,1,26.149,41.668,15.538,15.538,0,0,1,10.629,26.149Zm2.48,0A13.039,13.039,0,1,0,26.149,13.11,13.05,13.05,0,0,0,13.11,26.149Zm32.845,1.24a1.24,1.24,0,1,1,0-2.48h5.067a1.256,1.256,0,0,1,1.24,1.24,1.233,1.233,0,0,1-1.24,1.24Zm-44.715,0a1.24,1.24,0,1,1,0-2.48H6.307a1.24,1.24,0,1,1,0,2.48ZM39.294,13a1.2,1.2,0,0,1,0-1.736l3.579-3.614a1.228,1.228,0,1,1,1.736,1.736L41.03,12.968a1.133,1.133,0,0,1-.85.39A1.23,1.23,0,0,1,39.294,13ZM11.232,13,7.653,9.425A1.253,1.253,0,0,1,9.425,7.653L13,11.232A1.241,1.241,0,0,1,13,13a1.4,1.4,0,0,1-.886.354A1.23,1.23,0,0,1,11.232,13Zm13.677-6.7V1.24a1.24,1.24,0,1,1,2.48,0V6.307a1.24,1.24,0,1,1-2.48,0Z" transform="translate(11.356)"/>
+      </g>
+      <g id="Group_475" data-name="Group 475" transform="translate(-1 -13.695)">
+        <text id="WEATHER-2" data-name="WEATHER" class="cls-5" transform="translate(106 128)"><tspan x="0" y="0">WEATHER</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

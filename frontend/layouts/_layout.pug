@@ -1,0 +1,30 @@
+- var fontUrl = "https://fonts.googleapis.com/css?family=Muli:300,400,700,900&display=swap"
+- var bootstrapCssUrl = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+- var jqueryUrl = "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+- var popperUrl = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+- var bootstrapJsUrl = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Cloud Based Digital Signage Provider
+    link(href=fontUrl rel="stylesheet")
+    link(href=bootstrapCssUrl rel="stylesheet")
+    link(href="./css/app.css" rel="stylesheet")
+    block styles
+  body
+    include ../includes/_header.pug
+    block content
+    include ../includes/_footer.pug
+
+    script(src=jqueryUrl)
+    script(src=popperUrl)
+    script(src=bootstrapJsUrl)
+    script(src="./js/calendar.js")
+    script(src="./js/datepicker.js")
+    script(src="./js/sortable.js")
+    script(src="./js/zone.js")
+    block scripts

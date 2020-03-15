@@ -1,0 +1,74 @@
+- var jqueryUrl = "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Preview
+        style(type="text/css").
+            .slider {
+                width: 500px;
+                height: 300px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .slider .slide {
+                flex-basis: 800px;
+                display: none;
+            }
+
+            .slider .slide.active {
+                display: block;
+            }
+
+            .slider .slide img {
+                width: 100%;
+            }
+    body
+        .preview
+            #slider.slide
+                .slide.active(data-duration="1000")
+                    img(src="./images/home-slider/slider1.svg")
+                .slide.active(data-duration="5000")
+                    img(src="./images/home-slider/slider2.svg")
+                .slide.active(data-duration="3000")
+                    img(src="./images/home-slider/slider3.svg")
+            #slider2.slide
+                .slide.active(data-duration="5000")
+                    img(src="./images/home-slider/slider1.svg")
+                .slide.active(data-duration="3000")
+                    img(src="./images/home-slider/slider2.svg")
+                .slide.active(data-duration="1000")
+                    img(src="./images/home-slider/slider3.svg")
+        script(src=jqueryUrl)
+        script.
+            function showSlide(slider) {
+                var slides = slider.querySelectorAll('.slide');
+                var duration = 0;
+                var prevSlide = slides[0];
+                var activeSlide = slides[0];
+                for (var i = 0; i < slides.length; i++) {
+                    var activedSlide = slides[i];
+                    if (activedSlide.classList.contains('active') > 0) {
+                        prevSlide = activedSlide;
+                        if (i + 1 < slides.length) activeSlide = slides[i + 1];
+                        duration = parseInt(activedSlide.getAttribute('data-duration'), 10);
+                    }
+                }
+
+                prevSlide.classList.remove('active');
+                activeSlide.classList.add('active');
+
+                setTimeout(function() {
+                showSlide(slider);
+                }, duration);
+            }
+
+            var slider = document.getElementById('slider');
+            var slider2 = document.getElementById('slider2');
+            showSlide(slider);
+            showSlide(slider2);

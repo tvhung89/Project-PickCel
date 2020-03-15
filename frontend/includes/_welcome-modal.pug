@@ -1,0 +1,25 @@
+.modal.fade.ads__welcome-modal.show#welcome-modal
+    .modal-dialog.modal-lg
+        .modal-content
+            .modal-body
+                h1
+                    span Hi,
+                    span Hung Viet Tran
+                h4 You are just one more step away!
+                .ads__welcome-modal__form
+                    .ads__welcome-modal__left
+                        img(src="./images/rocket.svg")
+                    .ads__welcome-modal__right
+                        form(action="#" method="post")
+                            .form-group
+                                input.form-control.is-invalid(type="text" name="companyName" placeholder="Company Name *")
+                                .invalid-feedback * required
+                            .form-group
+                                select.form-control.is-invalid(name="countryCode")
+                                    option Select country *
+                                .invalid-feedback * required
+                            .form-group
+                                input.form-control.is-invalid(type="text" name="phoneNumber" placeholder="Phone")
+                                .invalid-feedback * required
+                            .form-group.d-flex
+                                button.btn.btn-primary.rounded(type="button") Proceed

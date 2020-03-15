@@ -1,0 +1,116 @@
+$body: 'ads__body';
+$bar: 'ads__left-bar';
+$content: 'ads__right-content';
+$display: 'ads__display';
+
+.#{$body} {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 51px);
+
+  .#{$bar} {
+    width: 7%;
+    min-width: 90px;
+    background-color: $darker-gray;
+
+    ul {
+      li {
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          color: $alpha-dark-gray;
+          position: relative;
+
+          i {
+            margin-bottom: 5px;
+          }
+
+          &:hover {
+            color: $white;
+            background-color: $dark-gray;
+            text-decoration: none;
+
+            &:after {
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 100%;
+              content: '';
+              width: 5px;
+              background-color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .#{$content} {
+    width: 93%;
+
+    .#{$display} {
+      > img {
+        width: 320px;
+        margin: 50px auto 25px;
+        display: block;
+      }
+
+      > p {
+        font-size: $normal-text-size;
+        max-width: 70%;
+        margin: 0 auto 25px;
+      }
+
+      > ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          margin-right: 50px;
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+
+      > .btn {
+        margin: 25px auto;
+      }
+
+      .players {
+        margin-top: 25px;
+
+        > p {
+          text-align: center;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          li {
+            margin: 0 25px;
+
+            a {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

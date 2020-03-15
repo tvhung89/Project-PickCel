@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 280 160">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-ticker);
+      }
+
+      .cls-2 {
+        fill: #5568b3;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 16px;
+        font-family: Muli-Light, Muli;
+        font-weight: 300;
+      }
+
+      .cls-5 {
+        fill: #f6f6f6;
+      }
+    </style>
+    <clipPath id="clip-ticker">
+      <rect width="280" height="160"/>
+    </clipPath>
+  </defs>
+  <g id="ticker" class="cls-1">
+    <rect class="cls-5" width="280" height="160"/>
+    <path id="BG" class="cls-2" d="M0,0H160V280H0Z" transform="translate(0 160) rotate(-90)"/>
+    <g id="Group_460" data-name="Group 460" transform="translate(-17 -2.602)">
+      <text id="SCROLLER" class="cls-3" transform="translate(116 110.602)"><tspan x="0" y="0">SCROLLER</tspan></text>
+      <g id="Group_459" data-name="Group 459" transform="translate(7.05)">
+        <path id="chevron-left" class="cls-4" d="M13.2,26.4a.694.694,0,0,0,.492-1.185L1.677,13.2,13.691,1.186A.695.695,0,0,0,12.708.2L.2,12.708a.7.7,0,0,0,0,.982L12.708,26.2a.692.692,0,0,0,.492.2Z" transform="translate(176.051 78) rotate(180)"/>
+        <path id="chevron-left-2" data-name="chevron-left" class="cls-4" d="M17.7,27.4a.694.694,0,0,0,.492-1.185L6.178,14.2,18.191,2.187a.695.695,0,0,0-.982-.982L4.7,13.71a.7.7,0,0,0,0,.982L17.209,27.2a.692.692,0,0,0,.492.2Z" transform="translate(119.449 50.6)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+.ads__template
+    .ads__template-left
+        .ads__template-header
+            h2 Create Template
+            .row
+                .col-12.col-sm-3
+                    .form-group
+                        label(for="templateName") Template Name
+                        input.form-control(type="text" placeholder="Enter template name")
+                .col-12.col-sm-3
+                    .form-group
+                        label(for="templateResolution") Resolution
+                        select.form-control
+                            option(value="1920*1080") 1920*1080
+                            option(value="1080*1920") 1080*1920
+                            option(value="custom") custom
+            .checkbox
+                input#templateGrid(type="checkbox")
+                label(for="templateGrid") Show Grid?
+        .ads__template-body
+            .ads__template-info
+                button.btn.btn-primary.rounded(type="button" data-target="#add-zone-modal" data-toggle="modal")
+                    i.icon-plus
+                    span Add Zone
+            .ads__template-handler(data-width="1920" data-height="1080")
+                .handler-drag(data-width="16" data-height="9" data-minwidth="160" data-minheight="90")
+                    span Zone 1
+                .handler-drag(data-width="16" data-height="9" data-minwidth="160" data-minheight="90")
+                    span Zone 2
+    .ads__template-right
+        .ads__template-details
+            h3 Zone Details
+            .row
+                each val in ['Top', 'Left', 'Width', 'Height']
+                    .col-6
+                        .input-group
+                            .input-group-prepend
+                                .input-group-text= val
+                            input.form-control(type="number" name=val)
+        .ads__template-layers
+            h3 Layers (Drag to sort)
+            ul.ads__template-container#layers
+                each val in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+                    li(class='ads__template-layer' + (val == 1 ? ' selected' : ''))
+                        p= 'Zone' + val 
+                        a(href="#")
+                            i.icon-trash
+        .ads__template-btns
+            button.btn.btn-primary.rounded(type="button") Cancel
+            button.btn.btn-info.rounded(type="button") Create Template
