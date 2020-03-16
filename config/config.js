@@ -46,7 +46,8 @@ const config = {
     port: process.env.RABBITMQ_POST || process.env.RABBITMQ_STAGING_POST || 5672,
     exchange: 'direct_displays',
     command: {
-      active_player: 'active_player'
+      active_player: 'active_player',
+      set_default: 'set_default'
     }
   },
   mail: {

@@ -1,9 +1,8 @@
-
 import db from '../db/operations'
 import utils from '../utils'
-import displayDb from '../db/display'
-import * as displays from '../../displays.json'
 import config from '../../config/config'
+import displayService from './displays'
+import displays from './displays'
 const updateDisplayDefaultCompositions = (display,composition_id) => {
     console.log(display,composition_id)
     const table = 'displays'
@@ -16,10 +15,27 @@ const updateDisplayDefaultCompositions = (display,composition_id) => {
                         })).then(response => {
                             const res = response
                             if (res.success && res.data.rowCount > 0) {
-                                re({
-                                    success: true,
-                                    display: res.data.rows[0]
-                                })
+                                const updatedDisplay = res.data.rows[0]
+                                const msg = {
+                                    command: config.rabbimq.command.set_default,
+                                    status: true,
+                                    message: 'Success'
+                                }    
+                                utils.send_msg_to_display(updatedDisplay.queue_name, JSON.stringify(msg)).then(res => {
+                                    if (res.success) {
+                                        displays.getDisplay({
+                                        id: updatedDisplay.id
+                                        }).then(response => {
+                                            re(response)
+                                        }).catch(err => reject(err))
+                                    } else {
+                                        rj(response)
+                                    }
+                                }).catch(err => reject(err))
+                                // re({
+                                //     success: true,
+                                //     display: res.data.rows[0]
+                                // })
                             } else {
                                 rj({
                                     success: false,

@@ -80,9 +80,6 @@ const send_msg_to_display = (queue, msg) => {
     })
 }
 
-const check_data_tag_asset = (key, value, asset_id)=>{
-
-}
 
 export default {
     sync_promises,

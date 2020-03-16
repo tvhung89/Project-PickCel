@@ -98,8 +98,8 @@ const HomeLayout = () => (
                     <Route exact path="/dashboard/schedule/create" component={CreateSchedule} />
                     <Route exact path="/dashboard/schedule/edit/:schedule_id" component={CreateSchedule} />
                     <Route exact path="/dashboard/license" component={License} />
-                    <Route exact path="/dashboard/settings" component={Settings} />
                     <Route exact path="/dashboard/logs" component={Logs} />
+                    <Route exact path="/dashboard/settings" component={Settings} />
                     <Route path="*" render={() => (<Redirect to="/dashboard" />)} />
                 </Switch>
             </div>
