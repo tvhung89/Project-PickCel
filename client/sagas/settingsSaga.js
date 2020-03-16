@@ -4,7 +4,7 @@ import * as types from '../actions/actionTypes'
 
 function* fetchUpdateDisplayDefaultComposition(action) {
     try {
-        yield put({ type: types.UPDATE_DISPLAY_DEFAULT_COMPOSITION_LOADING })
+        yield put({ type: types.UPDATE_DISPLAY_DEFAULT_COMPOSITION_LOADING})
         const endpoint = '/api/setting/update'
         const response = yield call(url => {
             return axios.post(url, {

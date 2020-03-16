@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
     displayTags: state.display ? state.display.tags : null,
     fetchedTag: state.tag ? state.tag.get : null,
     fetchedComposition: state.composition ? state.composition.get : null,
+    setting: state.setting ? state.setting : null
 })
 
 const mapDispatchToProps = dispatch => ({

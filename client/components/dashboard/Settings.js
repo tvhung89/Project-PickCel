@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Tags from './Tags'
 import config from '../../../config/config'
 import clientUtils from '../../utils'
+import { toast } from 'react-toastify'
 import {AssignComposition} from '../../containers/dashboard/modals/AssignComposition'
 class Setup extends Component{
     constructor(props){
@@ -41,8 +42,13 @@ class Setup extends Component{
     }
     componentWillReceiveProps(props){
         const self = this
-        const {fetchedTag,fetchedDisplay, displayTags,fetchedComposition } = props
+        const {fetchedTag,fetchedDisplay, displayTags,fetchedComposition,setting} = props
         const {filteredDisplays} = self.state
+        if(setting && setting!=self.props.setting && !setting.loading){
+            toast.success('Set default successfully!')
+        }else if(setting && setting!=self.props.setting && !setting.loading && setting.error){
+            toast.error('Set default failed!')
+        }
         if (fetchedDisplay && fetchedDisplay.display && fetchedDisplay != self.props.fetchedDisplay) {
             const displays = fetchedDisplay.display
             if(displays){
@@ -141,6 +147,20 @@ class Setup extends Component{
             self.props.getComposition(user_id)
         }
     }
+
+    handlePaginationChange = (e, page) => {
+        e.preventDefault()
+        const self = this
+        self.setState({
+            ...self.state,
+            pagination: {
+                ...self.state.pagination,
+                page
+            }
+        })
+        return false
+    }
+
     handleAssignComposition = (composition) => {
         const self = this
         const {selectedSchedule} = self.state
@@ -232,9 +252,8 @@ class Setup extends Component{
     }
 
     handleFilter = conditions => {
-        console.log(conditions)//condition là cawpk key-value cần tìm kiếm
         const self = this
-        const {display, searchDisplay, category} = self.state
+        const {display, searchDisplay, category,selectedDisplay} = self.state
         const displays = display.get.filter(d => {
             const name = d.name.toString().toLowerCase()
             const val = searchDisplay.toString().toLowerCase()
@@ -244,9 +263,20 @@ class Setup extends Component{
             }
             return isTruthy
         })
+        let arr_id = []
+        displays.forEach(e=>{
+         arr_id.push(e.id)
+        })
+        let selectedDisplays = [];
+        selectedDisplay.forEach(e=>{
+           if(arr_id.includes(e)){
+               selectedDisplays.push(e)
+           }
+        })
         self.setState({
             filteredDisplays: displays,
             filter: conditions,
+            selectedDisplay: selectedDisplays,
             pagination: {
                 ...self.state.pagination,
                 total: displays.length,
@@ -298,7 +328,7 @@ class Setup extends Component{
                                 <tr>
                                     <th className="text-danger">
                                     <div className="checkbox no-text"> 
-                                                        <input className="form-control" id="all-displays" type="checkbox" checked={!this.state.filteredDisplays.find(d => !d.selected)} onChange={e => {
+                                                        <input className="form-control" id="all-displays" type="checkbox" checked={!this.state.filteredDisplays.find(d => !d.selected) || filteredDisplays.length == selectedDisplay.length} onChange={e => {
                                                             this.setState({
                                                                 filteredDisplays: this.state.filteredDisplays.map(display => {
                                                                     return {
@@ -324,7 +354,7 @@ class Setup extends Component{
                                     return (
                                         <tr key={d.id}>
                                             <td>  <div className="checkbox no-text">
-                                                                <input className="form-control" id={d.id} type="checkbox" checked={d.selected} onChange={e => {
+                                                                <input className="form-control" id={d.id} type="checkbox" checked={d.selected || selectedDisplay.includes(d.id)} onChange={e => {
                                                                     this.handleSelectDisplay(d.id)
                                                                     this.setState({
                                                                         filteredDisplays: this.state.filteredDisplays.map(display => {
@@ -354,6 +384,25 @@ class Setup extends Component{
                                 )}
                             </tbody>
                         </table>
+                        <div className="foot">
+                            {filteredDisplays && filteredDisplays.length > 0 && (
+                                <p>{filteredDisplays.length} {filteredDisplays.length > 1 ? 'displays' : 'display'}</p>
+                            )}
+                            {pagination && pagination.numPage.length > 1 && (
+                                <ul className="pagination">
+                                    <li className={`page-item ${pagination.page == 0 ? 'disabled' : ''}`}><a className="page-link" href="#" onClick={e => this.handlePaginationChange(e, 0)}><i className="icon-angle-double-left"></i></a></li>
+                                    <li className={`page-item ${pagination.page == 0 ? 'disabled' : ''}`}><a className="page-link" href="#" onClick={e => this.handlePaginationChange(e, pagination.page - 1)}><i className="icon-angle-left"></i></a></li>
+                                    {pagination.numPage.length > 0 && pagination.numPage.map((n, index) => {
+                                        const activePageClasses = `page-item ${pagination.page === index ? 'active' : ''}`
+                                        return (
+                                            <li className={activePageClasses} key={index}><a className="page-link" href="#" onClick={e => this.handlePaginationChange(e, index)}>{index + 1}</a></li>
+                                        )
+                                    })}
+                                    <li className={`page-item ${pagination.page == pagination.numPage.length - 1 ? 'disabled' : ''}`}><a className="page-link" href="#"><i className="icon-angle-double-right"></i></a></li>
+                                    <li className={`page-item ${pagination.page == pagination.numPage.length - 1 ? 'disabled' : ''}`}><a className="page-link" href="#"><i className="icon-angle-right"></i></a></li>
+                                </ul>
+                            )}
+                        </div>
                 </div>
             
             </div>

@@ -256,6 +256,10 @@ export default {
             error: null
         }
     },
+    setting: {
+         loading: false,
+         error: null
+    },
     logs: {
            logs: null,
            loading: false,

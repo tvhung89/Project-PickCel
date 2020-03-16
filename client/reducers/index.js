@@ -10,6 +10,7 @@ import schedule from './scheduleReducer'
 import template from './templateReducer'
 import zoneAsset from './zoneAssetReducer'
 import logs from './logsReducer'
+import setting from './settingsReducer'
 const rootReducer = combineReducers({
     user,
     display,
@@ -21,7 +22,8 @@ const rootReducer = combineReducers({
     schedule,
     template,
     zoneAsset,
-    logs
+    logs,
+    setting
 })
 
 export default rootReducer;

@@ -10,6 +10,7 @@ import templateSaga from './templateSaga'
 import zoneAssetSaga from './zoneAssetSaga'
 import appSaga from './appSaga'
 import logsSaga from './logsSaga'
+import settingSaga from './settingsSaga'
 export default function* rootSaga() {
     yield all([
         userSaga.loadRegister(),
@@ -58,6 +59,7 @@ export default function* rootSaga() {
         appSaga.addApp(),
         appSaga.updateApp(),
         appSaga.deleteApp(),
-        logsSaga.getLog()
+        logsSaga.getLog(),
+        settingSaga.updateDisplayDefaultComposition()
     ])
 }
