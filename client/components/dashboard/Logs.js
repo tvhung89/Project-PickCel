@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import Select from 'react-select'
 import config from '../../../config/config'
 import clientUtils from '../../utils'
 class Logs extends Component{
@@ -9,7 +9,7 @@ class Logs extends Component{
             logs: null,
             filteredLogs: [],
             pagination: {
-                size: config.page_size,
+                size: config.page_size_log,
                 page: 0,
                 total: 0,
                 numPage: 0
@@ -51,8 +51,10 @@ class Logs extends Component{
             const displays = fetchedDisplay.display
             if(displays){
                 const displayFetched = fetchedDisplay.display.length > 0 ? fetchedDisplay.display.sort((a, b) => clientUtils.compare_date(b.modified_at, a.modified_at)) : [fetchedDisplay.display]
+                let options = [];
+                displayFetched.map(e=>{options.push({value: e.id, label: e.name})})
                 self.setState({
-                    fetchedDisplays: displayFetched,
+                    fetchedDisplays: options,
                     fetchedDisplaysLoading: fetchedDisplay.loading,
                 })
             }
@@ -79,13 +81,10 @@ class Logs extends Component{
         return false
     }
     
-    handleChangeDisplay = (e) =>{
-
-      const value = e.target.value
+    handleChangeDisplay = (selectedDisplay) =>{
+      const value = selectedDisplay.value
       const self = this
-      self.setState({
-        selectedDisplay: value!=0?value:0
-      })
+      self.setState({selectedDisplay})
       if(value!='0'){
           if(self.state.selectedSatus || self.state.selectedSatus!='0')
           self.props.getLogs({playerId: value, actionName: self.state.selectedSatus?self.state.selectedSatus:null, createdDate:{$gt: self.state.selectedTime}})
@@ -104,9 +103,9 @@ class Logs extends Component{
         })
         if(value!='0'){
         if(self.state.selectedDisplay)
-            self.props.getLogs({playerId: self.state.selectedDisplay?self.state.selectedDisplay: null, actionName: parseInt(value), createdDate: {$gt: self.state.selectedTime}})
+            self.props.getLogs({playerId: self.state.selectedDisplay.value?self.state.selectedDisplay.value: null, actionName: parseInt(value), createdDate: {$gt: self.state.selectedTime}})
         }else{
-            self.props.getLogs({playerId: self.state.selectedDisplay?self.state.selectedDisplay: null, createdDate: {$gt: self.state.selectedTime}})
+            self.props.getLogs({playerId: self.state.selectedDisplay.value?self.state.selectedDisplay.value: null, createdDate: {$gt: self.state.selectedTime}})
         }
   
       }
@@ -138,31 +137,34 @@ class Logs extends Component{
         if(value){
             if(self.state.selectedDisplay){
                 if(self.state.selectedSatus || self.state.selectedSatus!='0')
-                self.props.getLogs({playerId: self.state.selectedDisplay?self.state.selectedDisplay: null, actionName: self.state.selectedSatus?self.state.selectedSatus:null, createdDate:{$gt: time}})
+                self.props.getLogs({playerId: self.state.selectedDisplay.value?self.state.selectedDisplay.value: null, actionName: self.state.selectedSatus?self.state.selectedSatus:null, createdDate:{$gt: time}})
                 else
-                self.props.getLogs({playerId: self.state.selectedDisplay?self.state.selectedDisplay: null,  createdDate:{$gt: time}})
+                self.props.getLogs({playerId: self.state.selectedDisplay.value?self.state.selectedDisplay.value: null,  createdDate:{$gt: time}})
             }
         }
   
       }
     render(){
-        const {filteredLogs,pagination,fetchedDisplays,selectedDisplay} = this.state
+        const {filteredLogs,pagination,selectedDisplay,fetchedDisplays} = this.state
       //  const loaderClasses = `${fetchedDisplaysLoading || tagsLoading ? 'loading' : ''}`
         const loaderClasses = ''
         return(
             <div className={`ads__display ${loaderClasses}`}>
-            <div className="ads__top-bar row">
-                
-        
+            <div className="ads__top-bar">
+             <div className="row" style={{width:"100%"}}>
                     <div className="col-3 form-group">
                     <label>Select display:</label>
-                        <select className="form-control" onChange={this.handleChangeDisplay}>
+                    <Select
+                        value={selectedDisplay}
+                        onChange={this.handleChangeDisplay}
+                        options={fetchedDisplays}
+                    />
+                        {/* <select className="form-control" onChange={this.handleChangeDisplay}>
                         <option value="0">--Select display--</option>
                         {fetchedDisplays.length?fetchedDisplays.map(e=>
                         <option value={e.id}>{e.name}</option>
                         ):''}
-                        
-                        </select>
+                        </select> */}
                     </div>
                     <div className="col-3 form-group">
                     <label>Select status:</label>
@@ -195,7 +197,8 @@ class Logs extends Component{
                         <option value="4">1 month ago</option>
                     </select> 
                     </div>
-                </div>
+                    </div>
+            </div>
                 <div className="ads__display_grid">
                     <div className="ads__display_list">
                         <table id="display_list">
@@ -208,7 +211,7 @@ class Logs extends Component{
                                 </tr>
                             </thead>
                             <tbody>
-                                {filteredLogs && filteredLogs.length > 0 && filteredLogs.slice(pagination.page * pagination.size, (pagination.page + 1) * pagination.size).map(d => {
+                                {selectedDisplay!=0 && filteredLogs && filteredLogs.length > 0 && filteredLogs.slice(pagination.page * pagination.size, (pagination.page + 1) * pagination.size).map(d => {
                                     //const networkStatusClasses = `network-status ${d.network_status ? 'on' : 'off'}`
                                     return (
                                         <tr key={d._id}>
@@ -244,11 +247,11 @@ class Logs extends Component{
                             </tbody>
                         </table>
                         <div className="foot">
-                            {filteredLogs && filteredLogs.length > 0 && (
+                            {selectedDisplay!=0 && filteredLogs && filteredLogs.length > 0 && (
                                 <p>{filteredLogs.length} {filteredLogs.length > 1 ? 'logs' : 'log'}</p>
                             )}
 
-                            {pagination && pagination.numPage.length > 1 && (
+                            { selectedDisplay!=0 && pagination && pagination.numPage.length > 1 && (
                                 <ul className="pagination">
                                     <li className={`page-item ${pagination.page == 0 ? 'disabled' : ''}`}><a className="page-link" href="#" onClick={e => this.handlePaginationChange(e, 0)}><i className="icon-angle-double-left"></i></a></li>
                                     <li className={`page-item ${pagination.page == 0 ? 'disabled' : ''}`}><a className="page-link" href="#" onClick={e => this.handlePaginationChange(e, pagination.page - 1)}><i className="icon-angle-left"></i></a></li>

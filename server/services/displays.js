@@ -299,7 +299,7 @@ const updateDisplay = (display) => {
                 const updatedDisplay = {...display}
                 delete updateDisplay.id
                 delete updatedDisplay.selected
-
+               console.log(updatedDisplay)
                 db.exec_query(display.schedule_id && !display.id ? db.build_update_query(table, {
                     schedule_id: display.schedule_id
                 }, {schedule_id: '00000000-0000-0000-0000-000000000000'}) : db.build_update_query(table, {

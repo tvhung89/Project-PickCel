@@ -1,24 +1,24 @@
-import config from '../../config/config'
 import utils from '../utils'
-import dbw from '../db/operations'
-var MongoClient = require('mongodb').MongoClient;
-var url = `mongodb://${config.mongodb.host}:${config.mongodb.port}`;
+import mongo from '../db/mongo'
+
 const getLogs =  (condition)=>{
     try{
+      console.log(condition)
      return new Promise((resolve, reject) => {     
       if(utils.check_properties_validity(condition)){
-        MongoClient.connect(url, function(err, db) {
-        if (err) throw err;
-        var dbo = db.db(`${config.mongodb.database}`);
-        dbo.collection(`${config.mongodb.document}`).find(condition).toArray(function(err, result) {
-          if (err) throw err;
-          db.close();
-          resolve({
-            success: true,
-            logs: result
+       mongo.Logs.find(condition).sort({createdDate: -1}).exec((err, result)=>{
+        if(err){
+          reject({
+            success: false,
+            logs: [],
+            error: 'Error connect database'
           })
-        });
-      });
+        }
+        resolve({
+                success: true,
+                logs: result
+              })
+      })
     }else{
       reject({
         success: false,

@@ -4,7 +4,6 @@ import config from '../../config/config'
 import displayService from './displays'
 import displays from './displays'
 const updateDisplayDefaultCompositions = (display,composition_id) => {
-    console.log(display,composition_id)
     const table = 'displays'
   return new Promise((resolve, reject) => {
         if (display.length>0){
@@ -18,8 +17,7 @@ const updateDisplayDefaultCompositions = (display,composition_id) => {
                                 const updatedDisplay = res.data.rows[0]
                                 const msg = {
                                     command: config.rabbimq.command.set_default,
-                                    status: true,
-                                    message: 'Success'
+                                    content: composition_id
                                 }    
                                 utils.send_msg_to_display(updatedDisplay.queue_name, JSON.stringify(msg)).then(res => {
                                     if (res.success) {

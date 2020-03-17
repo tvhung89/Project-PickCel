@@ -108,7 +108,7 @@ class Preview extends Component {
                         {modalWidth > 0 && (
                             <div className="modal-content"  style={asset ? {width: asset.template_width > modalWidth || asset.template_width <= 16 ? modalWidth : asset.template_width, height: (asset.template_height/asset.template_width)*(asset.template_width > modalWidth || asset.template_width <= 16 ? modalWidth : asset.template_width)} : {}}>
                                 <div className="modal-body">
-                                    <button className="btn-close" type="button" data-dismiss="modal">
+                                    <button className="btn-close" type="button" onClick={()=>{$("#preview-modal").modal('hide')}}>
                                         <i className="icon-close"></i>
                                     </button>
                                     {asset && (

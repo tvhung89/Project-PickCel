@@ -670,7 +670,7 @@ class Display extends Component {
                         </table>
                         <div className="foot">
                             {fetchedDisplays && fetchedDisplays.length > 0 && (
-                                <p>{fetchedDisplays.length} {fetchedDisplays.length > 1 ? 'assets' : 'asset'}</p>
+                                <p>{fetchedDisplays.length} {fetchedDisplays.length > 1 ? 'displays' : 'display'}</p>
                             )}
 
                             {pagination && pagination.numPage.length > 1 && (

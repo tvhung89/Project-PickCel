@@ -41,9 +41,9 @@ const config = {
   },
   rabbimq: {
     user: process.env.RABBITMQ_USERNAME || process.env.RABBITMQ_STAGING_USERNAME || 'admin',
-    password: process.env.RABBITMQ_PASSWORD || process.env.RABBITMQ_STAGING_PASSWORD || 'vNpt%231234',
+    password: process.env.RABBITMQ_PASSWORD || process.env.RABBITMQ_STAGING_PASSWORD || 'vNpt%1234',
     host: process.env.RABBITMQ_HOSTNAME_NODE_1 || process.env.RABBITMQ_STAGING_HOSTNAME_NODE_1 || '123.30.185.223',
-    port: process.env.RABBITMQ_POST || process.env.RABBITMQ_STAGING_POST || 5672,
+    port: process.env.RABBITMQ_POST || process.env.RABBITMQ_STAGING_POST || 15672,
     exchange: 'direct_displays',
     command: {
       active_player: 'active_player',
@@ -72,6 +72,7 @@ const config = {
   fe_date_format: 'DD MMM, YYYY, hh:mm A',
   naming_date_format: 'DD MMM-YY HH:mm:ss',
   page_size: 5,
+  page_size_log: 10,
   api_address: '/pickcel/v1/api',
   template_temp_name: 'enosihtrofemanetalpmeton',
   default_composition_id: '00000000-0000-0000-0000-000000000000'

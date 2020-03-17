@@ -195,10 +195,11 @@ class AssignDisplay extends Component {
                                     <a href="#" onClick={this.handleToggleFilter}>
                             <i className="icon-filter"></i>
                         </a>
-                       </div>
-                       <div className="ads__search-box">
+                        <a className="ads__search-box">
                                     <input type="text" placeholder="Search..." onChange={this.handleSearchDisplay} value={displayName} /><i className="icon-search"></i>
-                                </div>
+                                </a>
+                       </div>
+                      
                                 </div>
                                 <div className="ads__display_grid">
                         {toggleFilter && (<Tags 
