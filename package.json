@@ -90,7 +90,7 @@
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.5",
     "node-rsa": "^1.0.7",
-    "qs": "^6.7.0",
+    "qs": "^6.9.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.9.0",
